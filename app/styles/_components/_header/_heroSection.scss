@@ -1,0 +1,185 @@
+.hero-section {
+	width: 100%;
+	height: 100%;
+
+	&.active {
+		box-shadow: inset 0 0 0 1000px rgba(18, 43, 143, 0.7);
+	}
+
+	&__container {
+		@include _(flex);
+		@include _(flex-column);
+		@include _(space-between);
+		color: $white;
+		width: 100%;
+		height: 100%;
+		max-width: 600px;
+		margin-left: auto;
+		padding: 24px 0 16px 16px;
+	}
+
+	&__logo {
+		display: block;
+		position: relative;
+
+		z-index: 999;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		svg {
+			width: 150px;
+			height: 35px;
+
+			rect,
+			path {
+				fill: $black;
+			}
+
+			@include breakpoint(medium) {
+				width: 100px;
+				height: 23px;
+			}
+		}
+
+		p {
+			font-size: 13px;
+			margin: 2px 0 4px 0;
+			color: $black;
+			@include breakpoint(medium) {
+				font-size: 9px;
+			}
+		}
+
+		&--ensp {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 20px;
+			background-image: url(../images/footer/logo_ensp_unl.png);
+			background-position: center;
+			background-size: cover;
+			width: 178px;
+			height: 80px;
+
+			&.active {
+				display: block;
+
+				@include breakpoint(medium) {
+					display: none;
+				}
+			}
+
+			@include breakpoint(medium) {
+				position: relative;
+				width: 119px;
+				height: 53px;
+				margin-top: 18px;
+				margin-left: 16px;
+			}
+		}
+	}
+
+	&__claim {
+		@include _(title-about);
+		@include _(flex);
+		position: relative;
+		margin-left: 32px;
+		text-align: right;
+		// margin-top: 72px;
+
+		&__underline {
+			position: absolute;
+			width: 90px;
+			bottom: 4px;
+			left: 0;
+			background-color: $white;
+			border-bottom: 1px solid $white;
+
+			@include breakpoint(medium) {
+				width: 78px;
+			}
+
+			@include breakpoint(small) {
+				width: 68px;
+			}
+		}
+
+		@include breakpoint(medium) {
+			margin-top: 20px;
+			font-size: 30px
+		}
+
+		@include breakpoint(small) {
+			font-size: 24px;
+			min-width: 185px;
+			margin-left: 0;
+		}
+	}
+
+	&__block {
+		display: block;
+		float: left;
+		// margin-top: 80px;
+
+		&__title {
+			color: $light-gray;
+		}
+
+		&__text {
+			padding-right: 10%;
+			color: $white;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 28px;
+		}
+
+		@include breakpoint(medium) {
+			display: none;
+		}
+
+		@include breakpoint(small) {
+			display: none;
+		}
+	}
+
+	&__page-identifier {
+		display: block;
+		float: left;
+		margin-top: 320px;
+
+	    a {
+			font-size: 50px;
+		    text-transform: uppercase;
+		    text-decoration: underline;
+
+		    @include breakpoint(small) {
+				font-size: 30px;
+				line-height: 30px;
+			}
+	    }
+
+	    &--small {
+	    	margin-top: 290px;
+
+	    	a {
+				line-height: 50px;
+				font-size: 40px;
+
+				@include breakpoint(small) {
+					font-size: 20px;
+					line-height: 30px;
+				}
+	    	}
+	    }
+
+	    @include breakpoint(medium) {
+			margin-top: 50px;
+		}
+
+		@include breakpoint(small) {
+			// margin: 10px;
+		}
+	}
+}
