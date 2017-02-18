@@ -1,102 +1,29 @@
 .menu {
-	width: 100%;
-	height: 100%;
 
-	&__button {
-		z-index: 2;
-		font-size: 28px;
-		letter-spacing: 2px;
-		width: 108px;
-		height: 42px;
-		padding: 6px;
-		text-align: center;
-		//text-decoration: underline;
-		//background-color: $blue;
-		color: $black;
-		font-weight: 600;
+  &__button {
+    display: block;
+    color: $black;
+    font-weight: 600;
 
-		&:hover {
-			cursor: pointer;
-		}
-	}
+    &:hover {
+      cursor: pointer;
+    }
 
-	&.active {
-		box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
-	}
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
 
-	&__container {
-		@include _(flex);
-		@include _(flex-column);
-		@include _(align-items-bottom);
+  &__wrapper {
+    font-size: 18px;
 
-		color: $white;
-		width: 100%;
-		height: 100%;
-		max-width: 600px;
-		padding: 32px 16px 0 0;
+    a {
+      margin: 8px;
 
-		@include breakpoint(medium) {
-			padding-top: 15px;
-		}
-
-		@include breakpoint(x-small) {
-			padding: 15px 0 0 0;
-		}
-	}
-
-	&__wrapper {
-		display: none;
-		margin-top: 50px;
-
-		&__close {
-			@include _(flex);
-			margin-bottom: 64px;
-			svg {
-				margin-left: auto;
-				fill: $white;
-				width: 40px;
-				height: 40px;
-
-				&:hover {
-					cursor: pointer;
-				}
-			}
-
-			@include breakpoint(medium) {
-				height: 15px;
-			}
-
-			@include breakpoint(small) {
-				margin-bottom: 32px;
-			}
-		}
-
-		ul {
-			margin-bottom: auto;
-			font-size: 24px;
-			font-weight: 600;
-
-			li {
-				text-align: right;
-				margin: 8px 0;
-
-				&:hover {
-					cursor: pointer;
-					text-decoration: underline;
-				}
-
-				@include breakpoint(small) {
-					margin: 10px;
-				}
-			}
-
-			@include breakpoint(small) {
-				font-size: 21px;
-			}
-
-			@include breakpoint(x-small) {
-				font-size: 16px;
-			}
-		}
-	}
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
 }

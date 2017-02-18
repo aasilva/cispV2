@@ -1,61 +1,116 @@
 .header {
-	@include _(backface_hack);
-	// @include _(padding);
+  @include _(backface_hack);
+  // @include _(padding);
 
-	position: absolute;
-	width: 100%;
-	height: $header_height;
-	top: -1px;
-	left: -1px;
-	//z-index: 2;
-	border: 1px solid $divider-color;
-	background-image: url(../images/hero/01.jpeg);
-	background-position: center;
-	background-size: cover;
+  width: 100%;
+  height: $header_height;
+  background-image: url(../images/hero/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
 
-	@include breakpoint(medium) {
-		height: 300px;
-	}
+  @include breakpoint(medium) {
+    height: 300px;
+  }
 
-	&.sobre {
-		box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
-	}
-	&.membros {
-		box-shadow: inset 0 0 0 1000px rgba(17,64,117,.7);
-	}
-	&.projetos {
-		box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
-	}
-	&.eventos {
-		box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
-	}
-	&.publicacoes {
-		box-shadow: inset 0 0 0 1000px rgba(18,43,143,.7);
-	}
-	&.novidades {
-		box-shadow: inset 0 0 0 1000px rgba(16,53,129,.7);
-	}
+  &__container {
+    @include _(flex);
+    @include _(flex-column);
+  }
 
-	&__container {
-		@include _(flex);
-		@include _(justify-content-center);
-		height: 100%;
-	}
+  &.sobre {
+    height: 200px;
+  }
+  &.membros {
+    height: 200px;
+  }
+  &.projetos {
+    height: 200px;
+    background-image: url(../images/hero/hero-bg-secondary.jpg);
+  }
+  &.eventos {
+    height: 200px;
+    background-image: url(../images/hero/hero-bg-secondary.jpg);
+  }
+  &.publicacoes {
+    height: 200px;
+  }
+  &.novidades {
+    height: 200px;
+  }
+
+  .logo {
+    display: block;
+    position: relative;
+
+    z-index: 999;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    svg {
+      width: 150px;
+      height: 35px;
+
+      rect,
+      path {
+        fill: $black;
+      }
+
+      @include breakpoint(medium) {
+        width: 100px;
+        height: 23px;
+      }
+    }
+
+    p {
+      font-size: 13px;
+      margin: 2px 0 4px 0;
+      color: $black;
+      @include breakpoint(medium) {
+        font-size: 9px;
+      }
+    }
+
+    &--ensp {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      background-image: url(../images/footer/logo_ensp_unl.png);
+      background-position: center;
+      background-size: cover;
+      width: 178px;
+      height: 80px;
+
+      &.active {
+        display: block;
+
+        @include breakpoint(medium) {
+          display: none;
+        }
+      }
+
+      @include breakpoint(medium) {
+        position: relative;
+        width: 119px;
+        height: 53px;
+        margin-top: 18px;
+        margin-left: 16px;
+      }
+    }
+  }
 
 }
 
 .banner {
-	z-index: 1;
-	position: absolute;
-	top: -2px;
-	left: 0;
-	height: 110px;
-	width: 100%;
+  @include _(flex);
+  @include _(space-between);
+  @include _(align-items-center);
 
-	background-color: #fff;
-	border-bottom: 2px solid $blue-mariner;
+  width: 100%;
+  height: 70px;
+  padding: 0 100px;
 
-	@include breakpoint(medium) {
-		height: 90px;
-	}
+  background-color: #fff;
 }

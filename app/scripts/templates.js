@@ -335,39 +335,23 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/header/heroSection.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this;
+  var stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
   
   
-  return "\n	<h2 class=\"hero-section__claim\">From research<br>to action <span class=\"hero-section__claim__underline\"></span> </h2>\n\n	<div class=\"hero-section__block\">\n		<!--<div class=\"hero-section__block__title\">Centro de Investigação Saúde Pública</div>-->\n		<div class=\"hero-section__block__text\">Primeiro centro de investigação exclusivamente dedicado à Saúde Pública.</div>\n	</div>\n";
+  return "\n	<h2 class=\"hero-section__claim\">From research to action</h2>\n  <div class=\"hero-section__block__text\">1º centro de investigação exclusivamente dedicado à Saúde Pública.</div>\n";
   }
 
-function program3(depth0,data) {
-  
-  var buffer = "", stack1;
-  buffer += "\n	<div class=\"hero-section__page-identifier\">\n		<a href=\"#"
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">"
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</a>\n	</div>\n\n";
-  return buffer;
-  }
-
-  buffer += "<div class=\"hero-section__container\">\n\n	<div id=\"logo\" class=\"hero-section__logo\">\n		";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_logo-v01", options) : helperMissing.call(depth0, "view", "icons/ic_logo-v01", options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n		<p>Centro de Investigação em Saúde Publica</p>\n		<p>Public Health Research Center</p>\n\n		<div class=\"hero-section__logo--ensp\" id=\"logoHome\">\n        </div>\n	</div>\n\n\n\n\n\n";
-  stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options) : helperMissing.call(depth0, "ifCond", ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>\n";
-  return buffer;
+  stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options) : helperMissing.call(depth0, "ifCond", ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options));
+  if(stack1 || stack1 === 0) { return stack1; }
+  else { return ''; }
   });
 
 this["JST"]["app/scripts/templates/header/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+  var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing, self=this;
 
 function program1(depth0,data) {
   
@@ -375,10 +359,13 @@ function program1(depth0,data) {
   return "active";
   }
 
-  buffer += "<div class=\"banner\"></div>\n<div id=\"hero-section\" class=\"hero-section ";
+  buffer += "<div class=\"banner\">\n  <div class=\"logo\" id=\"logo\">\n    ";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_logo-v01", options) : helperMissing.call(depth0, "view", "icons/ic_logo-v01", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n  </div>\n  <div id=\"menu\" class=\"menu\"></div>\n</div>\n\n<div id=\"hero-section\" class=\"hero-section ";
   stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", (depth0 && depth0.home), options) : helperMissing.call(depth0, "ifCond", ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", (depth0 && depth0.home), options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\"></div>\n\n<div id=\"menu\" class=\"menu\"></div>\n";
+  buffer += "\"></div>\n\n";
   return buffer;
   });
 
@@ -388,7 +375,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"menu__container\">\n	<div id=\"menu-button\" class=\"menu__button\">MENU</div>\n\n	<div id=\"menu-wrapper\" class=\"menu__wrapper\">\n		<ul>\n			<li><a href=\"#sobre\">Sobre Nós</a></li>\n			<li><a href=\"#membros\">Membros</a></li>\n			<li><a href=\"#projetos\">Projetos</a></li>\n			<li><a href=\"#eventos\">Eventos</a></li>\n			<li><a href=\"#publicacoes\">Publicações</a></li>\n			<li><a href=\"#noticias\">Notícias</a></li>\n		</ul>\n	</div>\n</div>\n";
+  return "<div id=\"menu-button\" class=\"menu__button\">X</div>\n\n<nav id=\"menu-wrapper\" class=\"menu__wrapper\">\n  <a href=\"#sobre\">Sobre Nós</a>\n  <a href=\"#membros\">Membros</a>\n  <a href=\"#projetos\">Projetos</a>\n  <a href=\"#eventos\">Eventos</a>\n  <a href=\"#publicacoes\">Publicações</a>\n  <a href=\"#noticias\">Notícias</a>\n</nav>\n";
   });
 
 this["JST"]["app/scripts/templates/home/eventsItem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

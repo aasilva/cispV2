@@ -9,7 +9,7 @@ define([
 ], function ($, _, Backbone, JST) {
 	'use strict';
 
-	var FooterView = Backbone.BaseView.extend({
+	var HeaderContainerView = Backbone.BaseView.extend({
 		template: JST['app/scripts/templates/header/index.hbs'],
 
 		tagName: 'section',
@@ -44,5 +44,5 @@ define([
 		}
 	});
 
-	return FooterView;
+	return HeaderContainerView;
 });
