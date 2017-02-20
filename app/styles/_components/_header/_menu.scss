@@ -1,4 +1,10 @@
 .menu {
+  @include _(flex);
+  @include _(align-self-bottom);
+
+  @include breakpoint(medium) {
+    align-self: inherit;
+  }
 
   &__button {
     display: block;
@@ -12,17 +18,112 @@
     @media screen and (min-width: 900px) {
       display: none;
     }
+
+    &--close {
+      display: none;
+    }
+
+    &--open {
+      display: none;
+
+      .active {
+        display: block;
+      }
+    }
   }
 
   &__wrapper {
-    font-size: 18px;
+    @include _(flex);
+    z-index: 999;
+    font-size: 16px;
+    transition: all 2s ease;
+
+    > li {
+      position: relative;
+      padding: 8px 8px 20px;
+
+      &:hover {
+        background-color: $hover-green;
+        cursor: pointer;
+
+        .sub-menu {
+          display: block;
+        }
+      }
+
+      @include breakpoint(medium) {
+        padding: 8px;
+
+        &:hover {
+          background-color: transparent;
+
+          > a {
+          color: $hover-green;
+          }
+        }
+      }
+    }
 
     a {
-      margin: 8px;
+      display: block;
+      text-align: center;
+      white-space: nowrap;
 
       &:hover {
         cursor: pointer;
-        text-decoration: underline;
+      }
+    }
+
+    .sub-menu {
+      display: none;
+      position: absolute;
+      top: 44px;
+      left: 0;
+      padding: 8px 0;
+      font-size: 14px;
+      background: $white;
+
+      li {
+        @include _(flex);
+        padding: 6px 8px;
+
+        a {
+          width: 100%;
+          text-align: left;
+
+          &:hover {
+            color: $hover-green;
+          }
+        }
+      }
+
+      @include breakpoint(medium) {
+        position: relative;
+        top: inherit;
+
+        li {
+          a {
+            text-align: center;
+          }
+        }
+      }
+
+    }
+
+    @include breakpoint(medium) {
+      display: none;
+
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 90px;
+      padding: 10px 0;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+
+      &.active {
+        display: flex;
       }
     }
   }

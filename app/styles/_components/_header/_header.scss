@@ -15,6 +15,22 @@
   &__container {
     @include _(flex);
     @include _(flex-column);
+
+    .banner {
+      @include _(flex);
+      @include _(space-between);
+      @include _(align-items-center);
+
+      position: relative;
+      width: 100%;
+      padding: 20px 100px 0;
+
+      background-color: #fff;
+
+      @include breakpoint(medium) {
+        padding: 12px;
+      }
+    }
   }
 
   &.sobre {
@@ -39,7 +55,10 @@
   }
 
   .logo {
-    display: block;
+    @include _(flex);
+    @include _(align-items-center);
+    margin-bottom: 20px;
+
     position: relative;
 
     z-index: 999;
@@ -48,69 +67,35 @@
       cursor: pointer;
     }
 
-    svg {
-      width: 150px;
-      height: 35px;
-
-      rect,
-      path {
-        fill: $black;
-      }
-
-      @include breakpoint(medium) {
-        width: 100px;
-        height: 23px;
-      }
+    &--cisp,
+    &--ensp {
+      margin: 0 8px;
     }
 
-    p {
-      font-size: 13px;
-      margin: 2px 0 4px 0;
-      color: $black;
-      @include breakpoint(medium) {
-        font-size: 9px;
+    &--cisp {
+      svg {
+        width: 150px;
+        height: 35px;
+
+        @include breakpoint(medium) {
+          width: 100px;
+          height: 23px;
+        }
       }
     }
 
     &--ensp {
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 20px;
-      background-image: url(../images/footer/logo_ensp_unl.png);
+      background-image: url(../images/logo_ensp_unl.png);
       background-position: center;
       background-size: cover;
       width: 178px;
       height: 80px;
 
-      &.active {
-        display: block;
-
-        @include breakpoint(medium) {
-          display: none;
-        }
-      }
-
       @include breakpoint(medium) {
         position: relative;
         width: 119px;
         height: 53px;
-        margin-top: 18px;
-        margin-left: 16px;
       }
     }
   }
-
-}
-
-.banner {
-  @include _(flex);
-  @include _(space-between);
-  @include _(align-items-center);
-
-  width: 100%;
-  height: 70px;
-  padding: 0 100px;
-
-  background-color: #fff;
 }

@@ -12,7 +12,7 @@ html,body,header{
 
 body {
 	background-color: #fff;
-	font-family: 'Raleway',sans-serif;
+	font-family: 'Trebuchet MS',sans-serif;
 	font-size: 16px;
 	color: $text-color;
 	text-rendering: optimizelegibility;
@@ -26,14 +26,6 @@ body {
 	@include _(limited-full-width);
 	min-height: 100%;
 	z-index: 1;
-	@include breakpoint(medium) {
-		margin-top: 300px;
-	}
-
-	@include breakpoint(small) {
-		margin-top: 300px;
-		padding: 0;
-	}
 }
 
 @import "_components/_header/_header",

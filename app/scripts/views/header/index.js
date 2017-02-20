@@ -17,8 +17,7 @@ define([
 		className: 'header__container',
 
 		events: {
-			'click #logo': '_returnHome',
-			"click #menu-button": '_openMenu'
+			'click #logo': '_returnHome'
 		},
 
 		/**
@@ -29,18 +28,6 @@ define([
 		*/
 		_returnHome: function () {
 			App.Router.navigate('#', { trigger: true });
-		},
-
-		/**
-		*	_openMenu - open menu
-		*
-		*	@private
-		*	@function
-		*/
-		_openMenu: function (ev) {
-			//App.Views.Header.$('#menu-button').toggleClass('active');
-			App.Views.Header.$('#menu').toggleClass('active');
-			App.Views.Header.$('#menu-wrapper').toggleClass('active');
 		}
 	});
 

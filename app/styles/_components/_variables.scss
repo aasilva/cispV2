@@ -67,6 +67,9 @@ $header_height: 500px;
 @include placeholder('align-items-bottom') {
 	align-items: flex-end;
 }
+@include placeholder('align-self-bottom') {
+	align-self: flex-end;
+}
 @include placeholder('flex-wrap') {
 	flex-wrap: wrap;
 }

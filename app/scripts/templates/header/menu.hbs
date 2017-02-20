@@ -1,10 +1,28 @@
-<div id="menu-button" class="menu__button">X</div>
+<div id="menu-button" class="menu__button">
 
-<nav id="menu-wrapper" class="menu__wrapper">
-  <a href="#sobre">Sobre Nós</a>
-  <a href="#membros">Membros</a>
-  <a href="#projetos">Projetos</a>
-  <a href="#eventos">Eventos</a>
-  <a href="#publicacoes">Publicações</a>
-  <a href="#noticias">Notícias</a>
-</nav>
+  <div class="menu__button menu__button--open active" id="menu-open">
+    {{{view 'icons/ic_menu'}}}
+  </div>
+
+  <div class="menu__button menu__button--close" id="menu-close">
+    {{{view 'icons/ic_close'}}}
+  </div>
+</div>
+
+<ul id="menu-wrapper" class="menu__wrapper">
+  <li>
+    <a href="#sobre">Quem somos</a>
+    <ul class="sub-menu">
+      <li><a href="#sobre/missao">Missão</a></li>
+      <li><a href="#sobre/linhas-tematicas">Linhas Temáticas</a></li>
+      <li><a href="#membros">Membros</a></li>
+      <li><a href="#sobre/comissao-acompanhamento">Comissão de Acompanhamento</a></li>
+    </ul>
+  </li>
+  <li><a href="#projetos">Projetos</a></li>
+  <li><a href="#eventos">Eventos</a></li>
+  <li><a href="#publicacoes">Publicações</a></li>
+  <li><a href="#noticias">Notícias</a></li>
+  <li><a href="#bolsas">Bolsas</a></li>
+  <li><a href="#contactos">Contactos</a></li>
+</ul>
