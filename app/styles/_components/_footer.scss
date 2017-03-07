@@ -1,99 +1,192 @@
 .footer {
-	margin-top: 80px;
-	padding: 16px 32px;
+  margin-top: 80px;
+  padding: 16px 32px;
+  background-color: $gray-footer;
 
-	@include breakpoint(small) {
-		padding: 8px;
-	}
+  @include breakpoint(small) {
+    padding: 8px;
+  }
 
-	&__container {
-		@include _(flex);
-		@include _(space-between);
-		@include _(align-items-center);
-		@include _(flex-wrap);
-		padding: 8px;
-		text-align: center;
+  &__container {
+    @include _(flex);
+    @include _(space-between);
+    @include _(align-items-center);
+    @include _(flex-wrap);
 
-		@include breakpoint(medium) {
-			justify-content: flex-start;
-		}
+    padding: 8px;
+    text-align: center;
 
-		@include breakpoint(small) {
-			justify-content: center;
-		}
-	}
+    @include breakpoint(medium) {
+      @include _(justify-content-start);
+    }
 
-	&__logo {
-		flex: 1;
-		margin: 0 24px 8px 24px;
-		width: 260px;
-		svg {
-			width: 160px;
-			height: 60px;
-		}
+    @include breakpoint(small) {
+      @include _(justify-content-center);
+    }
+  }
 
-		@include breakpoint(medium) {
-			width: 130px;
-			svg {
-				width: 130px;
-				height: auto;
-			}
-		}
-	}
+  &__column {
 
-	&__copy-right {
-		flex: 1 0 200px;
-		font-size: 12px;
-		margin-bottom: 8px;
+    .newsletter {
+      margin-bottom: 24px;
 
-		@include breakpoint(medium) {
-			//max-width: 260px;
-			margin-top: 8px;
-			font-size: 10px;
-			order: 3;
-		}
-	}
+      @include breakpoint(small) {
+        @include _(flex);
+        @include _(flex-column);
+        @include _(align-items-center);
 
-	&__partners {
-		@include _(flex);
-		@include _(space-between);
-		@include _(align-items-center);
-		flex: 1 0 200px;
+        margin-bottom: 0;
+        width: 100%;
+      }
 
-		@include breakpoint(x-small) {
-			@include _(flex-wrap);
-		}
+      h4 {
+        margin: 8px 0;
+        font-size: 14px;
+        font-weight: 400;
+      }
 
-		&__ensp,
-		&__fct {
-			background-size: cover;
-			background-repeat: no-repeat;
-			height: 60px;
-			margin: 0 24px 8px 24px ;
+      input {
+        margin: 0 0 12px;
 
-			@include breakpoint(medium) {
-				width: 30px;
-				height: 30px;
-			}
-		}
+        width: 100%;
+        max-width: 200px;
+        height: 15px;
 
-		&__ensp {
-			background-image: url(../images/logo_ensp_unl.png);
-			width: 220px;
-			height: 100px;
-			@include breakpoint(medium) {
-				width: 177px;
-				height: 80px;
-				margin: 0 auto;
-			}
-		}
-		&__fct {
-			background-image: url(../images/footer/logo_fct.png);
-			width: 182px;
-			@include breakpoint(medium) {
-				width: 82px;
-				margin: 0px auto;
-			}
-		}
-	}
+        &::-webkit-input-placeholder {
+          text-align: center;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          text-align: center;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          text-align: center;
+        }
+        &:-ms-input-placeholder {
+          text-align: center;
+        }
+      }
+    }
+
+    .logo--cisp,
+    .nav--social,
+    .nav--lang {
+      @include breakpoint(small) {
+        @include _(justify-content-center);
+        width: 100%;
+        margin-bottom: 8px;
+      }
+    }
+
+    .logo--cisp {
+      svg {
+        width: 155px;
+        height: 40px;
+      }
+    }
+
+    .nav--social,
+    .nav--lang {
+      @include _(flex);
+      @include _(align-self-bottom);
+
+      margin-left: 16px;
+
+      a {
+        margin-right: 8px;
+      }
+    }
+
+    .nav--social {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .nav--lang {
+      a {
+
+        &.active {
+          color: $hover-green;
+        }
+
+        &:hover {
+          color: $hover-green;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__row {
+    @include _(flex);
+
+    @include breakpoint(small) {
+      @include _(flex-wrap);
+      margin-bottom: 24px;
+    }
+  }
+
+  &__logo {
+    flex: 1;
+    margin: 0 24px 8px 24px;
+    width: 260px;
+
+    svg {
+      width: 160px;
+      height: 60px;
+    }
+
+    @include breakpoint(medium) {
+      width: 130px;
+
+      svg {
+        width: 130px;
+        height: auto;
+      }
+    }
+  }
+
+  &__partners {
+    @include _(flex);
+    @include _(space-between);
+    @include _(align-items-center);
+    flex: 1 0 200px;
+
+    @include breakpoint(x-small) {
+      @include _(flex-wrap);
+    }
+
+    &__ensp,
+    &__fct {
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 60px;
+      margin: 0 24px 8px 24px;
+
+      @include breakpoint(medium) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &__ensp {
+      background-image: url(../images/logo_ensp_unl.png);
+      width: 220px;
+      height: 100px;
+      @include breakpoint(medium) {
+        width: 177px;
+        height: 80px;
+        margin: 0 auto;
+      }
+    }
+    &__fct {
+      background-image: url(../images/footer/logo_fct.png);
+      width: 182px;
+      @include breakpoint(medium) {
+        width: 82px;
+        margin: 0px auto;
+      }
+    }
+  }
 }
