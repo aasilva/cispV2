@@ -1,20 +1,24 @@
-<a href="#eventos" class="close">+</a>
+<div class="event__detail__header">
+  <h2>Eventos</h2>
+  <a href="#eventos" class="close">{{{view 'icons/ic_close02'}}}</a>
+</div>
+
 <div class="event__detail__wrapper">
-	<section class="event__detail__column">
-		<div class="post__thumbnail" style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbnail_images.post-thumbnail.url}}{{else}}images/default_thumbnail.png{{/if}})" alt="{{{title}}}">
-			<!-- <time datetime="{{date}}" class="post__content__date">{{{prettyDate}}}</time> -->
-		</div>
 
-		<h2 class="event__detail__title">{{{title}}}</h2>
-		<p class="event__detail__when">
-			<span>Quando:</span> {{custom_fields.when}}
-		</p>
-		<p class="event__detail__where">
-			<span>Onde:</span> {{custom_fields.where}}
-		</p>
-	</section>
-	<section class="event__detail__column">
+  <section class="event__detail__column">
+    <div class="event-item">
+      {{{view 'events/item'}}}
+    </div>
 
-		<div class="content">{{{content}}}</div>
-	</section>
+    <div class="content">{{{content}}}</div>
+  </section>
+  <section class="event__detail__column">
+
+
+    {{#if thumbnail_images.post-thumbnail.url}}
+      <div class="event__detail__image">
+        <img src="{{thumbnail_images.post-thumbnail.url}}" alt="{{{title}}}">
+      </div>
+    {{/if}}
+  </section>
 </div>

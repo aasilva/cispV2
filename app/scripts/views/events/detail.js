@@ -18,9 +18,7 @@ define([
 			return 'event-detail-' + this.model.get('id');
 		},
 
-		className: 'event__detail',
-
-		events: {},
+		className: 'event__detail'
 	});
 
 	return EventsDetailView;

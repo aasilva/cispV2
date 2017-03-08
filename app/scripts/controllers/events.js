@@ -32,7 +32,7 @@ define([
 
 			if (params) {
 				var paramsUrl = params.replace(' ', '-').toLowerCase(); // prepare params to url (todo: replace special characters)
-				App.Router.navigate('#events?' + paramsUrl)
+				App.Router.navigate('#events?' + paramsUrl);
 
 				var paramsEscaped = escape(params); // html escape to params to be searched
 				App.Collections.Events.search = paramsEscaped;
@@ -54,6 +54,7 @@ define([
 		_loadMore: function (catg) {
 			App.Collections.Events.page++;
 			this._renderIndex(null, function () {
+
 				requestAnimationFrame(function () {
 					if ( (App.Collections.Events.page*10) > App.Collections.Events.length ) {
 						$('.load-more').remove();

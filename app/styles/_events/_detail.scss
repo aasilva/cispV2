@@ -8,15 +8,31 @@
 	@include _(full-width);
 	height: 100%;
 	background-color: #fff;
+	padding-top: 16px;
+
+	&__header {
+		h2 {
+			font-size: 34px;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+		margin-bottom: 32px;
+	}
 
 	&__wrapper {
 		height: 100%;
 		@include _(full-width);
 		@include _(flex);
-		@include _(justify-content-center);
 
 		@include breakpoint(small) {
 			@include _(flex-wrap);
+		}
+	}
+
+	&__image {
+		width: 100%;
+		img {
+			width: 100%;
 		}
 	}
 
@@ -24,7 +40,14 @@
 		width: 50%;
 		min-height: 320px;
 		margin: 0 auto;
-		padding: 128px 0;
+
+		.event-item {
+			width: 100%;
+
+			.more-button {
+				display: none;
+			}
+		}
 
 		@include breakpoint(medium) {
 			&:first-child {
@@ -49,61 +72,11 @@
 		}
 	}
 
-	.post__thumbnail {
-		position: relative;
-		min-height: 320px;
-		height: 25%;
-		margin-bottom: 16px;
-
-		@include breakpoint(medium) {
-			height: 0;
-			min-height: 150px;
-		}
-	}
-
-	.post__content__date {
-		top: 16px;
-		right: -16px;
-		padding: 8px;
-
-		font-size: 32px;
-		font-weight: 300;
-	}
-
-	&__title {
-		@include _(title-pages);
-		margin-bottom: 24px;
-
-
-		@include breakpoint(medium) {
-			font-size: 28px;
-			margin-left: 0;
-		}
-
-		@include breakpoint(medium) {
-			font-size: 28px;
-			margin-left: 0;
-		}
-	}
-	&__when,
-	&__where {
-		margin-left: 64px;
-		margin-bottom: 8px;
-		span {
-			font-weight: 600;
-			margin-right: 8px;
-		}
-
-		@include breakpoint(medium) {
-			margin-left: 0px;
-		}
-	}
-
 	.content {
 		max-height: 100%;
 		overflow: hidden;
 		overflow-y: scroll;
-		padding: 88px 64px 0 64px;
+		padding: 30px 30px 0 0;
 		line-height: 24px;
 
 		@include breakpoint(medium) {
@@ -129,9 +102,5 @@
 		position: absolute;
 		top: 4px;
 		right: 32px;
-		transform: rotate(45deg);
-		font-size: 88px;
-		font-weight: 300;
-		color: #999;
 	}
 }

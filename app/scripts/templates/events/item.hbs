@@ -1,22 +1,16 @@
-<div class="post-list__new__thumbnail"
-style="background-image: url({{#if thumbnail_images.post-thumbnail.url}}{{thumbnail_images.post-thumbnail.url}}{{else}}images/default_thumbnail.png{{/if}})">
-
-	<!-- <time datetime="{{date}}" class="post-list__new__thumbnail__date">{{{prettyDate}}}</time> -->
+<div class="event-item__date">
+  <p class="event-item__date__day">{{day}}</p>
+  <p class="event-item__month">{{month}}</p>
 </div>
 
-<section class="post-list__new__content">
+<div class="event-item__content">
+  <div class="event-item__content__title">{{{title}}}</div>
+  <div class="event-item__content__excerpt">{{{custom_fields.excerpt}}}</div>
 
-	<h2 class="post-list__new__content__title">{{{title}}}</h2>
+  <div class="event-item__content__when">{{custom_fields.when}}</div>
+  <div class="event-item__content__where">{{custom_fields.where}}</div>
 
-	{{#if custom_fields.when}}
-	<div class="post-list__new__content__when"><span>Quando: </span>{{custom_fields.when}}</div>
-	{{/if}}
-
-	{{#if custom_fields.when}}
-	<div class="post-list__new__content__where"><span>Onde: </span>{{custom_fields.where}}</div>
-	{{/if}}
-
-	<div class="post-list__new__content__text">{{{custom_fields.excerpt}}}</div>
-
-	<a href="#eventos/{{slug}}" class="post-list__new__content__button">{{{view 'icons/ic_arrow-right'}}} Saber mais</a>
-</section>
+  <a href="#eventos/{{slug}}" class="more-button">
+    {{{view 'icons/ic_more-button'}}}
+  </a>
+</div>
