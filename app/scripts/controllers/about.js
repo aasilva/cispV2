@@ -5,9 +5,8 @@ define([
 	'backbone',
 	'collections/about',
 	'models/about',
-	'views/about/index',
-	'views/about/item',
-], function ($, Backbone, AboutCollection, AboutModel, AboutListView, AboutItemView) {
+	'views/about/index'
+], function ($, Backbone, AboutCollection, AboutModel, AboutListView) {
 	'use strict';
 
 	var AboutController = Backbone.Router.extend({
@@ -25,6 +24,7 @@ define([
 		*	@param {string} catg (optional)
 		*/
 		_index: function (catg) {
+
 			$(window).scrollTop(0);
 			App.Collections.About = new AboutCollection;
 			App.Collections.About.catg = catg;

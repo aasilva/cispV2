@@ -43,7 +43,10 @@ define([
 	*	@Summary: helper to execute an IF statement with comparison and logical operator
 	*/
 	function ifCondHelper (v1, operator, v2, options) {
+
 		switch (operator) {
+	        case '!==':
+	            return (v1 !== v2) ? options.fn(this) : options.inverse(this);
 	        case '==':
 	            return (v1 == v2) ? options.fn(this) : options.inverse(this);
 	        case '===':
@@ -73,6 +76,7 @@ define([
 	*	@Summary: helper to execute an html repeater
 	*/
 	Handlebars.registerHelper('repeat', function(count, options) {
+
 		var out = "";
 		var c = typeof count === 'number' ? count : 1; 
 		var i = count - 1;
@@ -115,5 +119,15 @@ define([
 		}
 
 		return App.i18n.toJSON()[msg] || '{{' + msg + '}}';
+	});
+
+	/*
+	*	@author André Silva
+	*	@Version 1.0.0
+	*	@Summary: helper log
+	*/
+	Handlebars.registerHelper('log', function(value) {
+		console.log(value);
+		return
 	});
 });

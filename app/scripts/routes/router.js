@@ -4,16 +4,17 @@ define([
 	'jquery',
 	'backbone',
 	'templates',
+  'controllers/common',
 	'controllers/home',
 	'controllers/about',
-	'controllers/post',
-	'controllers/page',
+  'controllers/static',
 	'controllers/publication',
 	'controllers/news',
 	'controllers/events',
 	'controllers/members',
-	'controllers/project'
-], function ($, Backbone, JST, HomeController, AboutController, PostController, PageController, PublicationController, NewsController, EventsController, MembersController, ProjectController) {
+	'controllers/project',
+	'controllers/grants'
+], function ($, Backbone, JST, CommonController, HomeController, AboutController, StaticController, PublicationController, NewsController, EventsController, MembersController, ProjectController, GrantsController) {
 	'use strict';
 
 	var Router = Backbone.Router.extend({
@@ -31,7 +32,6 @@ define([
 		*   @public
 		*/
 		initialize: function () {
-			var _this = this;
 
 			if ( !App.Controllers.Home ) {
 				App.Controllers.Home = new HomeController;
@@ -39,11 +39,11 @@ define([
 			if ( !App.Controllers.About ) {
 				App.Controllers.About = new AboutController;
 			}
-			if ( !App.Controllers.Post ) {
-				App.Controllers.Post = new PostController;
+			if ( !App.Controllers.Static ) {
+				App.Controllers.Static = new StaticController;
 			}
-			if ( !App.Controllers.Page ) {
-				App.Controllers.Page = new PageController;
+			if ( !App.Controllers.Common ) {
+				App.Controllers.Common = new CommonController;
 			}
 			if ( !App.Controllers.Publication ) {
 				App.Controllers.Publication = new PublicationController;
@@ -54,12 +54,15 @@ define([
 			if ( !App.Controllers.Events ) {
 				App.Controllers.Events = new EventsController;
 			}
-			if ( !App.Controllers.Project ) {
-				App.Controllers.Project = new ProjectController;
-			}
-			if ( !App.Controllers.Members ) {
-				App.Controllers.Members = new MembersController;
-			}
+      if ( !App.Controllers.Members ) {
+        App.Controllers.Members = new MembersController;
+      }
+      if ( !App.Controllers.Project ) {
+        App.Controllers.Project = new ProjectController;
+      }
+      if ( !App.Controllers.Grants ) {
+        App.Controllers.Grants = new GrantsController;
+      }
 		},
 
 		/**
@@ -73,6 +76,7 @@ define([
 				App.Views.Active.close();
 				App.Views.Active = null;
 			}
+
 			if ( !App.Views.Footer ) {
 				this._footer();
 			}
@@ -103,7 +107,7 @@ define([
 		*	@function
 		*/
 		_footer: function () {
-			App.Vent.trigger('pages:footer');
+			App.Vent.trigger('common:footer');
 		},
 
 		/**
@@ -113,7 +117,7 @@ define([
 		*	@function
 		*/
 		_header: function (catg) {
-			App.Vent.trigger('pages:header', catg);
+			App.Vent.trigger('common:header', catg);
 		},
 
 		/**
@@ -125,7 +129,6 @@ define([
 		_index: function () {
 			this._common();
 			App.Vent.trigger('home:index');
-			// App.Vent.trigger('posts:index');
 		},
 
 		/**
@@ -136,6 +139,8 @@ define([
 		*   @param {string} catg - category name/slug
 		*/
 		_category: function (catg) {
+      console.log('Category:', catg);
+
 			this._common(catg);
 			this._loading();
 
@@ -156,9 +161,12 @@ define([
 			}else
 			if ( catg === 'membros' ) {
 				App.Vent.trigger('members:index');
-			} else
-			if ( catg === 'noticias' ) {
-				App.Vent.trigger('posts:index', catg);
+			}else
+			if ( catg === 'bolsas' ) {
+				App.Vent.trigger('grants:index');
+			}else
+			if ( catg === 'contactos' ) {
+				App.Vent.trigger('static:contacts');
 			}
 		},
 
@@ -174,11 +182,6 @@ define([
 			this._common(catg);
 			this._loading();
 
-			if ( catg === 'projetos' ) {
-				App.Vent.trigger('projects:detail', {
-					slug: slug
-				});
-			} else
 			if ( catg === 'sobre' ) {
 				App.Vent.trigger('about:index', {
 					slug: slug

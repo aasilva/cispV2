@@ -10,7 +10,7 @@ define([
 	'use strict';
 
 	var PagesItemView = Backbone.BaseView.extend({
-		template: JST['app/scripts/templates/pages/item.hbs'],
+		template: JST['app/scripts/templates/common/item.hbs'],
 
 		tagName: 'article',
 

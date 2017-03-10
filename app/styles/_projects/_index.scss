@@ -1,0 +1,49 @@
+.project-item {
+
+  &__header {
+    width: 100%;
+
+    padding: 12px;
+    background-color: $gray-dates;
+
+    h3 {
+      color: $black;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+
+  &__content {
+    @include _(flex);
+    @include _(flex-wrap);
+    @include _(space-between);
+
+    padding: 12px;
+
+    &__desc {
+      flex: 4;
+
+      width: 100%;
+
+      p {
+        a {
+          font-weight: 900;
+        }
+      }
+
+      .author {
+        margin-bottom: 8px;
+        font-weight: 900;
+      }
+    }
+
+    &__thumb {
+      flex: 1;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

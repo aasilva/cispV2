@@ -15,12 +15,10 @@ define([
 		tagName: 'article',
 
 		id: function () {
-			return 'event-detail-' + this.model.get('id');
+			return 'new-detail-' + this.model.get('id');
 		},
 
-		className: 'event__detail',
-
-		events: {},
+		className: 'new__detail'
 	});
 
 	return NewsDetailView;

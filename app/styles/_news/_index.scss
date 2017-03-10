@@ -1,72 +1,55 @@
-.post-list {
+.new-item {
+	@include _(flex);
+	width: 100%;
+	margin-bottom: 24px;
 
-	&__new {
-		@include _(flex);
-		position: relative;
+	@include breakpoint(small) {
 		width: 100%;
-		border-bottom: 2px solid $light-gray;
-		margin-top: 16px;
-		margin-bottom: 24px;
-		padding-bottom: 8px;
+	}
 
-		&:after {
-			content:'';
-			position: absolute; 
-			bottom: 0; 
-			right: 0; 
-			height: 10px; 
-			width: 2px;
-			background: $light-gray; 
+	&__thumb {
+		flex: 1;
+		margin-right: 24px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__content {
+		flex: 5;
+
+		position: relative;
+
+
+		padding: 16px 8px;
+
+		border: 1px solid $gray-dates;
+		border-right: none;
+		border-left: none;
+
+		font-size: 14px;
+
+		&__title {
+			font-weight: 900;
+			margin-bottom: 24px;
 		}
 
-		&__thumbnail {
-			@include flex(1);
-			position: relative;
-			margin-right: 40px;
-			margin-bottom: 8px;
-			height: 160px;
-			background-size: cover;
-			background-position: 50% 50%;
-			background-repeat: no-repeat;
 
-			&__date {
-				position: absolute;
-			    display: block;
-			    top: 10px;
-			    right: -22px;
-			    padding: 4px;
-			    background-color: $blue-mariner;
-			    color: #fff;
-			    text-transform: uppercase;
-			    text-align: center;
-			}
+		&__when {
+			margin-top: 12px;
+			font-weight: 900;
 		}
 
-		&__content {
-			@include flex(3);
-			padding: 8px  0;
-			font-size: 16px;
+		.more-button {
+			position: absolute;
+			right: 0;
+			bottom: 0;
 
-			&__author {
-				margin-bottom: 8px;
-				font-weight: 500;
-			}
+			width: 24px;
+			height: 21px;
 
-			&__title {
-				margin-bottom: 16px;
-				font-weight: 700;
-				font-size: 20px;
-			}
-
-			&__text {
-				font-weight: 500;
-				line-height: 18px;
-
-				p {
-					margin-bottom: 8px;
-				}
-			}
-
+			cursor: pointer;
 		}
 	}
 }

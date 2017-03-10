@@ -10,15 +10,15 @@ define([
 	'use strict';
 
 	var PostsDetailView = Backbone.BaseView.extend({
-		template: JST['app/scripts/templates/projects/detail.hbs'],
+		template: JST['app/scripts/templates/common/detail.hbs'],
 
 		tagName: 'article',
 
 		id: function () {
-			return 'project-detail-' + this.model.get('id');
+			return 'page-detail-' + this.model.get('id');
 		},
 
-		className: 'project__detail',
+		className: 'page-detail',
 
 		events: {},
 	});

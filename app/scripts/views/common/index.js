@@ -10,7 +10,7 @@ define([
     'use strict';
 
     var PagesIndexView = Backbone.CollectionView.extend({
-        template: JST['app/scripts/templates/pages/index.hbs'],
+        template: JST['app/scripts/templates/common/index.hbs'],
 
         tagName: 'section',
 

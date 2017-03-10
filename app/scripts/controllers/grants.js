@@ -3,16 +3,15 @@
 define([
 	'jquery',
 	'backbone',
-	'collections/projects',
-	'models/project',
-	'views/projects/index'
-], function ($, Backbone, ProjectCollection, ProjectModel, ProjectListView) {
+	'collections/grants',
+	'views/grants/grants-index'
+], function ($, Backbone, GrantsCollection, GrantsListView) {
 	'use strict';
 
-	var ProjectController = Backbone.Router.extend({
+	var GrantController = Backbone.Router.extend({
 		initialize: function () {
-			App.Vent.on('projects:index', this._index, this);
-			App.Vent.on('projects:more', this._loadMore, this);
+			App.Vent.on('grants:index', this._index, this);
+			App.Vent.on('grants:more', this._loadMore, this);
 		},
 
 		/**
@@ -23,9 +22,9 @@ define([
 		*	@param {string} catg (optional)
 		*/
 		_index: function (catg) {
-			App.Collections.Project = new ProjectCollection;
+			App.Collections.Project = new GrantsCollection;
 			App.Collections.Project.catg = catg;
-			App.Views.Active = new ProjectListView({
+			App.Views.Active = new GrantsListView({
 				collection: App.Collections.Project,
 				target: '#projects-container'
 			});
@@ -83,5 +82,5 @@ define([
 
 	});
 
-	return ProjectController;
+	return GrantController;
 });

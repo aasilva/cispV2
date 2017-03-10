@@ -18,7 +18,7 @@ define([
 			return 'new-' + this.model.get('id');
 		},
 
-		className: 'post-list__new',
+		className: 'new-item',
 
 		events: {},
 

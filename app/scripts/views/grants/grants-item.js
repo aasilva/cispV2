@@ -9,19 +9,16 @@ define([
 ], function ($, _, Backbone, JST) {
 	'use strict';
 
-	var PostsItemView = Backbone.BaseView.extend({
-		template: JST['app/scripts/templates/posts/item.hbs'],
+	var ProjectsItemView = Backbone.BaseView.extend({
+		template: JST['app/scripts/templates/grants/grants-item.hbs'],
 
 		tagName: 'article',
 
 		id: function () {
-			return 'post-' + this.model.get('id');
+			return 'grant-' + this.model.get('id');
 		},
 
-		className: function () {
-			var postspan = this.model.get('custom_fields')['post-span'];
-			return 'post' + (postspan ? '--' + postspan[0] : '');
-		},
+		className: 'grant-item',
 
 		events: {},
 
@@ -44,5 +41,5 @@ define([
 		}
 	});
 
-	return PostsItemView;
+	return ProjectsItemView;
 });

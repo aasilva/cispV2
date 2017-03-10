@@ -1,48 +1,28 @@
 /*global define*/
 
 define([
-	'jquery',
-	'backbone',
-	'collections/page',
-	'models/page',
-	'views/pages/index',
-	'views/pages/item',
-	'views/pages/detail',
+	'jquery', 'backbone',
+	'collections/page', 'models/page',
+
+	'views/common/alert-view',
 	'views/footer/footer',
 	'views/header/index',
+
 	'views/header/heroSection',
 	'views/header/menu'
-], function ($, Backbone, PageCollection, PageModel, PageListView, PageItemView, PageDetailView, FooterView, HeaderView, HeroSectionView, MenuView) {
+], function ($, Backbone,
+						 PageCollection, PageModel,
+
+						 AlertView, FooterView,
+
+						 HeaderView, HeroSectionView, MenuView) {
 	'use strict';
 
-	var PageController = Backbone.Router.extend({
+	var CommonElementsController = Backbone.Router.extend({
 		initialize: function () {
-			App.Vent.on('pages:footer', this._footer, this);
-			App.Vent.on('pages:header', this._header, this);
-			App.Vent.on('pages:index', this._index, this);
-			App.Vent.on('pages:detail', this._detail, this);
-		},
-
-		/**
-		*	_index - fetch and render first list of pages
-		*
-		*	@private
-		*	@function
-		*	@param {string} catg (optional)
-		*/
-		_index: function (catg) {
-			App.Collections.Page = new PageCollection;
-			App.Collections.Page.fetch({
-				success: function () {
-					App.Views.Active = new PageListView({
-						collection: App.Collections.Page,
-						subview: PageItemView
-					});
-					requestAnimationFrame(function () {
-						App.Container.html(App.Views.Active.render().el);
-					});
-				}
-			});
+			App.Vent.on('common:footer', this._footer, this);
+			App.Vent.on('common:header', this._header, this);
+      App.Vent.on('common:alert', this._alert, this);
 		},
 
 		/**
@@ -55,6 +35,7 @@ define([
 		*/
 		_detail: function (options) {
 			var _this = this;
+			console.log('detail');
 
 			if ( App.Collections.Page && App.Collections.Page.findWhere({ slug: options.slug }) ) {
 				App.Models.Detail = App.Collections.Page.findWhere({ slug: options.slug });
@@ -132,6 +113,23 @@ define([
 			});
 		},
 
+    _alert: function (message, closeCallback) {
+      var msg = message || 'Default message';
+
+      App.Views.Alert = new AlertView({
+        model: new Backbone.Model({
+          message: msg
+        })
+      });
+
+      App.Body.append(App.Views.Alert.render().el);
+
+      if(closeCallback){
+        App.Views.Alert.on("closed", closeCallback);
+      }
+
+    },
+
 		/**
 		*	_heroSection
 		*
@@ -165,5 +163,5 @@ define([
 
 	});
 
-	return PageController;
+	return CommonElementsController;
 });

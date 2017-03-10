@@ -17,7 +17,7 @@ define([
 
 		id: 'posts-list',
 
-		className: 'posts-list  posts-list--projects',
+		className: 'posts-list posts-list--projects',
 
 		events: {
 			'click #load-more-posts': '_lazyLoad'

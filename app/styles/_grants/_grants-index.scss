@@ -1,0 +1,25 @@
+.grant-item {
+  padding: 24px;
+  background-color: $gray-footer;
+
+  &__content {
+
+  }
+
+  &__research-field {
+    margin-top: 24px;
+    font-weight: 900;
+  }
+
+  &__contacts {
+    display: flex;
+
+    .button {
+      margin-left: auto;
+      padding: 8px 12px;
+
+      color: $white;
+      background-color: $hover-green;
+    }
+  }
+}

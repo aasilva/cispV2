@@ -5,11 +5,9 @@ define([
 	'backbone',
 	'collections/publications',
 	'collections/author',
-	'models/publication',
 	'views/publications/index',
-	'views/publications/item',
-	'views/publications/filters',
-], function ($, Backbone, PublicationCollection, AuthorCollection, PublicationModel, PublicationListView, PublicationItemView, FiltersView) {
+	'views/publications/filters'
+], function ($, Backbone, PublicationCollection, AuthorCollection, PublicationListView, FiltersView) {
 	'use strict';
 
 	var PublicationController = Backbone.Router.extend({

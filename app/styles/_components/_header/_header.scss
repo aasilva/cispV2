@@ -39,19 +39,15 @@
   &.membros {
     height: 200px;
   }
-  &.projetos {
-    height: 200px;
-    background-image: url(../images/hero/hero-bg-secondary.jpg);
-  }
+
+  &.projetos,
+  &.bolsas,
+  &.publicacoes,
+  &.noticias,
   &.eventos {
     height: 200px;
     background-image: url(../images/hero/hero-bg-secondary.jpg);
-  }
-  &.publicacoes {
-    height: 200px;
-  }
-  &.novidades {
-    height: 200px;
+
   }
 
   .logo {
