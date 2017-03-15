@@ -8,7 +8,7 @@ define([
 
 	var PostModel = Backbone.Model.extend({
 		url: function () {
-			return App.BaseUrl + '?json=get_post&post_type=news&slug=' + this.get('slug');
+			return App.BaseUrl + App.locale + '?json=get_post&post_type=news&slug=' + this.get('slug');
 		},
 
 		initialize: function() {
@@ -29,6 +29,14 @@ define([
 
 			// calculate Estimated Reading Time
 			res.ert = Math.ceil((res.content.split(' ').length / 250));
+
+			if ( !response.thumbnail ) {
+				if ( response.post && response.post.thumbnail ) {
+					response.thumbnail = response.post.thumbnail;
+				} else if ( response.attachments && response.attachments[0].url ) {
+					response.thumbnail = response.attachments[0].url;
+				}
+			}
 
 			return res;
 		}

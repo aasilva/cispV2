@@ -17,7 +17,7 @@
 
   <section class="col images-wrapper">
     {{#each attachments}}
-      <img src="{{images.medium_large.url}}" alt="{{caption}}">
+      <img src="{{this.url}}" alt="{{caption}}">
     {{/each}}
   </section>
 </div>
