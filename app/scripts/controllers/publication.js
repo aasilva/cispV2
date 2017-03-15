@@ -5,9 +5,10 @@ define([
 	'backbone',
 	'collections/publications',
 	'collections/author',
+	'collections/categories',
 	'views/publications/index',
 	'views/publications/filters'
-], function ($, Backbone, PublicationCollection, AuthorCollection, PublicationListView, FiltersView) {
+], function ($, Backbone, PublicationCollection, AuthorCollection, CategoriesCollection, PublicationListView, FiltersView) {
 	'use strict';
 
 	var PublicationController = Backbone.Router.extend({
@@ -67,6 +68,7 @@ define([
 						App.Vent.trigger('global:scroll');
 
 						_this._renderFilters();
+						_this._callCategories();
 
 						if ( callback ) {
 							callback();
@@ -94,6 +96,16 @@ define([
 						target: '#authors-list'
 					});
 					$('#publications-filter').html(filters.render().el);
+				}
+			});
+		},
+		_callCategories: function () {
+
+			App.Collections.Categories = new CategoriesCollection;
+      App.Collections.Categories.parent = 5;
+			App.Collections.Categories.fetch({
+				success: function () {
+					console.log(App.Collections.Categories);
 				}
 			});
 		}
