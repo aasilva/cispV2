@@ -285,7 +285,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "\n    </div>\n\n    <div class=\"nav--social\">\n      <a href=\"tel:+351217512100\" title=\"\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_phone", options) : helperMissing.call(depth0, "view", "icons/ic_phone", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</a>\n      <a href=\"mailto:cisp@gmail.com\" title=\"\">";
+  buffer += "</a>\n      <a href=\"mailto:cisp@ensp.unl.pt\" title=\"\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_email", options) : helperMissing.call(depth0, "view", "icons/ic_email", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</a>\n      <a href=\"#contactos\" title=\"\">";
@@ -1088,7 +1088,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<a href=\"tel:+351217512100\" title=\"phone number: +351217512100\">+351 217 512 100</a>\n    </div>\n    <div class=\"row\">\n      ";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_email", options) : helperMissing.call(depth0, "view", "icons/ic_email", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "<a href=\"mailto:cisp@gmail.com\" title=\"\">jperelman@ensp.unl.pt</a>\n    </div>\n    <div class=\"row\">\n      ";
+  buffer += "<a href=\"mailto:cisp@ensp.unl.pt\" title=\"\">cisp@ensp.unl.pt</a>\n    </div>\n    <div class=\"row\">\n      ";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_pin", options) : helperMissing.call(depth0, "view", "icons/ic_pin", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += " <p>Avenida Padre Cruz, <br/>1600-566, Lisbon, Portugal</p>\n    </div>\n  </div>\n\n  <div class=\"block\">\n\n    <div class=\"link-wrapper\">\n      <a href=\"#contactos/colaborar-com-cisp\">\n        Colaborar com o cisp\n        ";
