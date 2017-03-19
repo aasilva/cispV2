@@ -15,13 +15,10 @@ define([
 		tagName: 'article',
 
 		id: function () {
-			return 'new-' + this.model.get('id');
+			return 'event-' + this.model.get('id');
 		},
 
-		className: function () {
-
-			return this.model.get('isLarge') && this.model.get('thumbnail') ? 'home__section__new home__section__new--large' : 'home__section__new';
-		},
+		className: 'home__section__event',
 
 		events: {},
 

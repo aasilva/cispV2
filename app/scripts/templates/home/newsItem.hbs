@@ -1,9 +1,7 @@
+<div class="home__section__new__thumb" style="background-image: url({{thumbnail}})"> </div>
+
 <div class="home__section__new__content">
 	<h4>{{title}}</h4>
-	<p>{{{excerpt}}}</p>
-	<a href="#noticias/{{slug}}">{{{view 'icons/ic_arrow-right'}}} Saber mais</a>
+	<p>{{{custom_fields.excerpt}}}</p>
+	<a href="#noticias/{{slug}}" class="more-button">{{{view 'icons/ic_more-button'}}}</a>
 </div>
-
-{{#ifCond thumbnail '&&' isLarge}}
-<div class="home__section__new__image" style="background-image: url({{thumbnail}})"> </div>
-{{/ifCond}}

@@ -1,59 +1,54 @@
 .header {
   @include _(backface_hack);
-  // @include _(padding);
-
   width: 100%;
-  height: $header_height;
-  background-image: url(../images/hero/hero-bg.jpg);
-  background-position: center;
-  background-size: cover;
-
-  @include breakpoint(medium) {
-    height: 300px;
-  }
+  z-index: 99;
 
   &__container {
     @include _(flex);
+    @include _(space-between);
+    @include _(align-items-center);
+
+    @include _(limited-full-width);
+
+  }
+
+  &__wrapper {
+    @include _(flex);
     @include _(flex-column);
+    @include _(align-items-bottom);
+    @include _(align-self-bottom);
 
-    .banner {
+    @include breakpoint(medium) {
+      @include _(align-self-center);
+    }
+
+    .nav--lang {
       @include _(flex);
-      @include _(space-between);
-      @include _(align-items-center);
 
-      position: relative;
-      width: 100%;
-      padding: 20px 100px 0;
-
-      background-color: #fff;
+      margin-bottom: 12px;
 
       @include breakpoint(medium) {
-        padding: 12px;
+        display: none;
       }
+      a {
+        margin-right: 8px;
+        &.active {
+          color: $hover-green;
+        }
+
+        &:hover {
+          color: $hover-green;
+          text-decoration: underline;
+        }
+      }
+
     }
-  }
-
-  &.sobre {
-    height: 200px;
-  }
-  &.membros {
-    height: 200px;
-  }
-
-  &.projetos,
-  &.bolsas,
-  &.publicacoes,
-  &.noticias,
-  &.eventos {
-    height: 200px;
-    background-image: url(../images/hero/hero-bg-secondary.jpg);
-
   }
 
   .logo {
     @include _(flex);
     @include _(align-items-center);
-    margin-bottom: 20px;
+    margin: 10px 0;
 
     position: relative;
 
@@ -69,6 +64,8 @@
     }
 
     &--cisp {
+      margin-left: 0;
+
       svg {
         width: 150px;
         height: 35px;

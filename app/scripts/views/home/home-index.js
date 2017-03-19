@@ -10,7 +10,7 @@ define([
 	'use strict';
 
 	var HomeView = Backbone.BaseView.extend({
-		template: JST['app/scripts/templates/home/index.hbs'],
+		template: JST['app/scripts/templates/home/home-index.hbs'],
 
 		tagName: 'div',
 

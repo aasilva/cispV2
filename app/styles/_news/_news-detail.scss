@@ -29,13 +29,16 @@
 
     .col {
       flex: 1;
+      .content {
 
-      figure {
-        display: none;
-      }
+        p {
+          margin-bottom: 8px;
+        }
 
-      p {
-        margin-bottom: 8px;
+        img,
+        figure {
+          display: none;
+        }
       }
 
       &.images-wrapper {

@@ -13,6 +13,10 @@
     @include _(align-items-center);
     @include _(flex-wrap);
 
+    //@include _(limited-full-width);
+    max-width: 1200px;
+    margin: 0 auto;
+
     padding: 8px;
     text-align: center;
 

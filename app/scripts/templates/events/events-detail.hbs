@@ -7,18 +7,17 @@
 
   <section class="event__detail__column">
     <div class="event-item">
-      {{{view 'events/item'}}}
+      {{{view 'events/events-item'}}}
     </div>
 
     <div class="content">{{{content}}}</div>
   </section>
   <section class="event__detail__column">
 
-
-    {{#if thumbnail_images.post-thumbnail.url}}
+    {{#each attachments}}
       <div class="event__detail__image">
-        <img src="{{thumbnail_images.post-thumbnail.url}}" alt="{{{title}}}">
+        <img src="{{this.url}}" alt="{{caption}}">
       </div>
-    {{/if}}
+    {{/each}}
   </section>
 </div>

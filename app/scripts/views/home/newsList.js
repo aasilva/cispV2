@@ -10,8 +10,7 @@ define([
     'use strict';
 
     var NewsListView = Backbone.CollectionView.extend({
-        template: JST['app/scripts/templates/home/newsList.hbs'],
-
+        template: JST['app/scripts/templates/home/newsList.hbs']
     });
 
     return NewsListView;

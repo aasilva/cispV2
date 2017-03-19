@@ -2,7 +2,7 @@
 define([
 	'jquery',
 	'backbone',
-	'views/home/index',
+	'views/home/home-index',
 	'views/home/newsList',
 	'views/home/newsItem',
 	'views/home/eventsList',
@@ -63,34 +63,11 @@ define([
 		*/
 		_news: function () {
 			App.Collections.News = new NewsCollection;
-			App.Collections.News.count = 3;
+			App.Collections.News.count = 2;
 			App.Collections.News.isHome = true;
 			App.Collections.News.fetch({
 				remove: false,
-				success: function (response) {
-
-					// setting isLarge attribute to n'th model of the collection to stylize.
-					var index = App.Collections.News.indexOf(App.Collections.News.model);
-					var indexSelected = App.Collections.News.at(index - 2);
-
-					if (indexSelected) {
-						indexSelected.set('isLarge', true);
-					} else {
-						indexSelected = App.Collections.News.at(index - 1);
-
-						if (indexSelected) {
-							if (indexSelected.get('thumbnail')) {
-								indexSelected.set('isLarge', true);
-							}
-						} else {
-							indexSelected = App.Collections.News.at(index);
-
-							if (indexSelected.get('thumbnail')) {
-								indexSelected.set('isLarge', true);
-							}
-						}
-					}
-
+				success: function () {
 					requestAnimationFrame(function () {
 						App.Views.News = new NewsListView({
 							el: '#home-news',
@@ -116,7 +93,7 @@ define([
 		*/
 		_events: function () {
 			App.Collections.Events = new EventsCollection;
-			App.Collections.Events.count = 3;
+			App.Collections.Events.count = 2;
 			App.Collections.Events.isHome = true;
 			App.Collections.Events.fetch({
 				remove: false,

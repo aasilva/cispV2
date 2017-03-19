@@ -9,7 +9,7 @@ define([
   'use strict';
 
   var ThematicView = Backbone.BaseView.extend({
-    template: JST['app/scripts/templates/about/thematic.hbs'],
+    template: JST['app/scripts/templates/static/thematic.hbs'],
 
     tagName: 'div',
 

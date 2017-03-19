@@ -2,33 +2,6 @@ define(['handlebars'], function(Handlebars) {
 
 this["JST"] = this["JST"] || {};
 
-this["JST"]["app/scripts/templates/about/commission.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
-
-
-  return "<div class=\"about__commission\">\n  <h2 class=\"about__title\">\n    Comisssão de acompanhamento\n  </h2>\n  <p>\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur, doloribus explicabo fugit nam obcaecati omnis repudiandae sunt vel? Adipisci assumenda beatae consequuntur eum fugit iste libero optio suscipit tempore.\n  </p>\n  <p>\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate distinctio facere ipsa minus, porro totam? Eius magnam nesciunt perspiciatis possimus quasi sapiente sint voluptatem? Laboriosam magni maxime quidem sequi sint.\n  </p>\n\n  <section class=\"about__commission__section\">\n    <div class=\"about__commission__col\">\n      <div class=\"about__commission__col__thumb\"></div>\n      <div class=\"about__commission__col__desc\">\n        <h3 class=\"about__commission__col__name\">John Doe</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n      </div>\n    </div>\n    <div class=\"about__commission__col\">\n      <div class=\"about__commission__col__thumb\"></div>\n      <div class=\"about__commission__col__desc\">\n        <h3 class=\"about__commission__col__name\">John Doe</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n      </div>\n    </div>\n    <div class=\"about__commission__col\">\n      <div class=\"about__commission__col__thumb\"></div>\n      <div class=\"about__commission__col__desc\">\n        <h3 class=\"about__commission__col__name\">John Doe</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n      </div>\n    </div>\n  </section>\n</div>";
-  });
-
-this["JST"]["app/scripts/templates/about/mission.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
-
-
-  return "<div class=\"about__mission\">\n\n  <h2 class=\"about__title\">Missão </h2>\n\n  <p>O <span>Centro de Investigação em Saúde Pública (CISP) /  Public Health Research Center (PHRC)</span> é o primeiro\n    centro de investigação reconhecido pela\n    <a href=\"http://www.fct.pt/\">Fundação para a Ciência e a Tecnologia</a> exclusivamente dedicado à Saúde Pública. Tem\n    como missão realizar, desenvolver e promover a investigação em Saúde Pública, tendo em vista a criação de\n    conhecimento que possa ser colocado ao serviço da melhoria da saúde das populações.</p>\n\n  <p>Investigar em Saúde Pública é contribuir para a compreensão da saúde das populações e analisar o papel central dos\n    sistemas e organizações de saúde, no sentido mais tradicional da Saúde Pública. Mas significa também orientar este\n    esforço de compreensão para os desafios mais emergentes, atuais e complexos da Saúde Pública: envelhecimento,\n    aumento das doenças crónicas, endemias, epidemias e pandemias, crises económicas e crescimento insustentável das\n    despesas de saúde, desigualdades e iniquidades em saúde, ameaças ambientais, desenvolvimento tecnológico e terapias\n    inovadoras, segurança do doente e qualidade dos cuidados de saúde.</p>\n\n  <p>A missão do CISP é inspirada e motivada por estes desafios, aos quais responde não apenas com a ciência e com a\n    investigação que realiza, mas também com o estabelecimento de pontes com a sociedade e o envolvimento no apoio ao\n    desenho de políticas de saúde, de acordo com as melhores práticas em Saúde Pública, a nível nacional e\n    internacional.</p>\n\n  <p>O CISP está sediado na <a href=\"http://www.ensp.unl.pt/ensp\">Escola Nacional de Saúde Pública</a> (ENSP) da <a\n    href=\"http://www.unl.pt/pt/\">Universidade NOVA de Lisboa</a>, que está na génese da sua criação. À imagem das\n    atividades da ENSP, a investigação realizada no CISP é multi e transdisciplinar, e resulta do trabalho de\n    <a href=\"http://www.aasilva.com/cisp/front-end/#sobre/membros\"></a>especialistas em áreas tão diversas como a saúde\n    ocupacional, promoção da saúde, gestão em saúde, economia da saúde, epidemiologia e estatística, direito e ética em\n    saúde e políticas de saúde.</p>\n\n  <p>O CISP colabora com diversos centros de investigação nacionais e internacionais na área da saúde e é aberto a todos\n    os investigadores que desejem contribuir para o objetivo comum de uma investigação em Saúde Pública de alta\n    qualidade, reconhecida em Portugal e no mundo.</p>\n</div>\n</div>";
-  });
-
-this["JST"]["app/scripts/templates/about/thematic.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
-
-
-  return "<div class=\"about__thematic\">\n		<h3 class=\"about__title\">Linhas temáticas</h3>\n\n		<img src=\"images/about//organogram.svg\" alt=\"CISP - scientific comission organogram\">\n</div>";
-  });
-
 this["JST"]["app/scripts/templates/common/alert.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
@@ -43,18 +16,20 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return buffer;
   });
 
-this["JST"]["app/scripts/templates/common/modal.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["app/scripts/templates/common/heroSection.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
+  var stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
 
+function program1(depth0,data) {
+  
+  
+  return "\n  <div class=\"hero-section__container\">\n    <h2 class=\"hero-section__claim\">From research to action</h2>\n    <p class=\"hero-section__text\">1º centro de investigação exclusivamente dedicado à Saúde Pública.</p>\n  </div>\n";
+  }
 
-  buffer += "<div class=\"alert-view-wrapper\">\n\n    <div class=\"alert-view-wrapper-message\">";
-  if (helper = helpers.message) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.message); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "</div>\n    <div id=\"alert-button\" class=\"alert-view-wrapper-button\">OK</div>\n\n</div>\n";
-  return buffer;
+  stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options) : helperMissing.call(depth0, "ifCond", ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options));
+  if(stack1 || stack1 === 0) { return stack1; }
+  else { return ''; }
   });
 
 this["JST"]["app/scripts/templates/components/spinner.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -75,12 +50,12 @@ function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
   buffer += "\n      <div class=\"event__detail__image\">\n        <img src=\""
-    + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail'])),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + escapeExpression(((stack1 = (depth0 && depth0.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" alt=\"";
-  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\">\n      </div>\n    ";
+  if (helper = helpers.caption) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.caption); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\n      </div>\n    ";
   return buffer;
   }
 
@@ -88,14 +63,14 @@ function program1(depth0,data) {
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_close02", options) : helperMissing.call(depth0, "view", "icons/ic_close02", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</a>\n</div>\n\n<div class=\"event__detail__wrapper\">\n\n  <section class=\"event__detail__column\">\n    <div class=\"event-item\">\n      ";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "events/item", options) : helperMissing.call(depth0, "view", "events/item", options));
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "events/events-item", options) : helperMissing.call(depth0, "view", "events/events-item", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    </div>\n\n    <div class=\"content\">";
   if (helper = helpers.content) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.content); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</div>\n  </section>\n  <section class=\"event__detail__column\">\n\n\n    ";
-  stack1 = helpers['if'].call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.thumbnail_images)),stack1 == null || stack1 === false ? stack1 : stack1['post-thumbnail'])),stack1 == null || stack1 === false ? stack1 : stack1.url), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  buffer += "</div>\n  </section>\n  <section class=\"event__detail__column\">\n\n    ";
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.attachments), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n  </section>\n</div>\n";
   return buffer;
@@ -214,40 +189,16 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return buffer;
   });
 
-this["JST"]["app/scripts/templates/header/heroSection.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["app/scripts/templates/header/header.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+  var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
 
-function program1(depth0,data) {
-  
-  
-  return "\n	<h2 class=\"hero-section__claim\">From research to action</h2>\n  <div class=\"hero-section__block__text\">1º centro de investigação exclusivamente dedicado à Saúde Pública.</div>\n";
-  }
 
-  stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options) : helperMissing.call(depth0, "ifCond", ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", "home", options));
-  if(stack1 || stack1 === 0) { return stack1; }
-  else { return ''; }
-  });
-
-this["JST"]["app/scripts/templates/header/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing, self=this;
-
-function program1(depth0,data) {
-  
-  
-  return "active";
-  }
-
-  buffer += "<div class=\"banner\">\n  <a href=\"/#\" class=\"logo\" id=\"logo\">\n    <div class=\"logo--cisp\">\n      ";
+  buffer += "<div class=\"header__container\">\n  <a href=\"/#\" class=\"logo\" id=\"logo\">\n    <div class=\"logo--cisp\">\n      ";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_logo-v02", options) : helperMissing.call(depth0, "view", "icons/ic_logo-v02", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    </div>\n    <div class=\"logo--ensp\"></div>\n  </a>\n  <div id=\"menu\" class=\"menu\"></div>\n</div>\n\n<div id=\"hero-section\" class=\"hero-section ";
-  stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", (depth0 && depth0.home), options) : helperMissing.call(depth0, "ifCond", ((stack1 = (depth0 && depth0.data)),stack1 == null || stack1 === false ? stack1 : stack1.catg), "===", (depth0 && depth0.home), options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\"></div>\n\n";
+  buffer += "\n    </div>\n    <div class=\"logo--ensp\"></div>\n  </a>\n\n  <div class=\"header__wrapper\">\n\n    <div class=\"nav--lang\">\n      <a href=\"#\" class=\"active\">PT</a>\n      <a href=\"#\">EN</a>\n    </div>\n\n    <div id=\"menu\" class=\"menu\"></div>\n\n  </div>\n</div>";
   return buffer;
   });
 
@@ -270,47 +221,36 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/home/eventsItem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
+  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
-function program1(depth0,data) {
-  
-  var buffer = "", stack1;
-  buffer += "\n	<div class=\"home__section__new__content__when\"><span>Quando: </span>"
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.when)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</div>\n	";
-  return buffer;
-  }
 
-function program3(depth0,data) {
-  
-  var buffer = "", stack1;
-  buffer += "\n	<div class=\"home__section__new__content__where\"><span>Onde: </span>"
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.where)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</div>\n	";
-  return buffer;
-  }
-
-  buffer += "<div class=\"home__section__new__content\">\n	<h4>";
+  buffer += "<div class=\"event-item__date\">\n  <div class=\"event-item__date__day\">";
+  if (helper = helpers.day) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.day); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n  <div class=\"event-item__month\">";
+  if (helper = helpers.month) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.month); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n</div>\n\n<div class=\"event-item__content\">\n  <div class=\"event-item__content__title\">";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "</h4>\n	<p>";
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</div>\n  <div class=\"event-item__content__excerpt\">";
   stack1 = ((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.excerpt)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1);
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</p>\n\n	";
-  stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.when), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n\n	";
-  stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.when), {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n\n	<a href=\"#eventos/";
+  buffer += "</div>\n\n  <div class=\"event-item__content__when\">"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.when)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n  <div class=\"event-item__content__where\">"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.where)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n\n  <a href=\"#eventos/";
   if (helper = helpers.slug) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.slug); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\">";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
+    + "\" class=\"more-button\">\n    ";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_more-button", options) : helperMissing.call(depth0, "view", "icons/ic_more-button", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " Saber mais</a>\n</div>\n\n\n";
+  buffer += "\n  </a>\n</div>";
   return buffer;
   });
 
@@ -320,63 +260,53 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"home__section__title\"><a href=\"#eventos\">Eventos</a></div>\n";
+  return "<h2 class=\"home__section__wrapper__title\"><a href=\"#eventos\">Eventos</a></h2>\n";
   });
 
-this["JST"]["app/scripts/templates/home/index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["app/scripts/templates/home/home-index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, options, helperMissing=helpers.helperMissing;
 
 
-  buffer += "<section class=\"home__section\" id=\"home-news\">";
+  buffer += "<div class=\"home-container\">\n\n  <section class=\"home__section home__section--multi\">\n    <div class=\"home__section__wrapper\" id=\"home-news\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "components/spinner", options) : helperMissing.call(depth0, "view", "components/spinner", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</section>\n\n<section class=\"home__section\" id=\"home-events\">";
+  buffer += "</div>\n    <div class=\"home__section__wrapper\" id=\"home-events\">";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "components/spinner", options) : helperMissing.call(depth0, "view", "components/spinner", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</section>\n\n<section class=\"home__section\" id=\"home-publications\">";
+  buffer += "</div>\n  </section>\n\n  <section class=\"home__section\" id=\"home-publications\">\n\n      ";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "components/spinner", options) : helperMissing.call(depth0, "view", "components/spinner", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</section>\n";
+  buffer += "\n\n  </section>\n\n</div>\n";
   return buffer;
   });
 
 this["JST"]["app/scripts/templates/home/newsItem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this;
+  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
-function program1(depth0,data) {
-  
-  var buffer = "", stack1, helper;
-  buffer += "\n<div class=\"home__section__new__image\" style=\"background-image: url(";
+
+  buffer += "<div class=\"home__section__new__thumb\" style=\"background-image: url(";
   if (helper = helpers.thumbnail) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.thumbnail); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + ")\"> </div>\n";
-  return buffer;
-  }
-
-  buffer += "<div class=\"home__section__new__content\">\n	<h4>";
+    + ")\"> </div>\n\n<div class=\"home__section__new__content\">\n	<h4>";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + "</h4>\n	<p>";
-  if (helper = helpers.excerpt) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.excerpt); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  stack1 = ((stack1 = ((stack1 = (depth0 && depth0.custom_fields)),stack1 == null || stack1 === false ? stack1 : stack1.excerpt)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1);
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</p>\n	<a href=\"#noticias/";
   if (helper = helpers.slug) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.slug); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\">";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_arrow-right", options) : helperMissing.call(depth0, "view", "icons/ic_arrow-right", options));
+    + "\" class=\"more-button\">";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_more-button", options) : helperMissing.call(depth0, "view", "icons/ic_more-button", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " Saber mais</a>\n</div>\n\n";
-  stack1 = (helper = helpers.ifCond || (depth0 && depth0.ifCond),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.thumbnail), "&&", (depth0 && depth0.isLarge), options) : helperMissing.call(depth0, "ifCond", (depth0 && depth0.thumbnail), "&&", (depth0 && depth0.isLarge), options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n";
+  buffer += "</a>\n</div>\n";
   return buffer;
   });
 
@@ -386,7 +316,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"home__section__title\"><a href=\"#noticias\">Notícias</a></div>";
+  return "<h2 class=\"home__section__wrapper__title\"><a href=\"#noticias\">Notícias</a></h2>";
   });
 
 this["JST"]["app/scripts/templates/home/publicationsItem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -395,23 +325,19 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"home__section__publication__content\">\n	<h4>";
+  buffer += "<div class=\"home__section__publication__thumb\">\n  <div class=\"event-item__date__day\">";
+  if (helper = helpers.day) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.day); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n  <div class=\"event-item__month\">";
+  if (helper = helpers.month) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.month); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n</div>\n<p>";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</h4>\n	<p>";
-  if (helper = helpers.excerpt) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.excerpt); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</p>\n	\n	<time datetime=\"";
-  if (helper = helpers.date) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.date); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "\">";
-  if (helper = helpers.prettyDate) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.prettyDate); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</time>\n</div>\n";
+    + "</p>";
   return buffer;
   });
 
@@ -421,7 +347,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"home__section__title\"><a href=\"#publicacoes\">Publicações</a></div>";
+  return "<h2 class=\"home__section__wrapper__title\"><a href=\"#publicacoes\">Publicações</a></h2>";
   });
 
 this["JST"]["app/scripts/templates/icons/ic_arrow-right.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -805,7 +731,7 @@ function program1(depth0,data) {
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_close02", options) : helperMissing.call(depth0, "view", "icons/ic_close02", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</a>\n</div>\n\n<div class=\"new__detail__wrapper\">\n\n  <div class=\"row\">\n    <div class=\"new-item\">\n      ";
-  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "news/item", options) : helperMissing.call(depth0, "view", "news/item", options));
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "news/news-item", options) : helperMissing.call(depth0, "view", "news/news-item", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    </div>\n  </div>\n\n  <section class=\"col\">\n    <div class=\"content\">";
   if (helper = helpers.content) { stack1 = helper.call(depth0, {hash:{},data:data}); }
@@ -856,7 +782,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return buffer;
   });
 
-this["JST"]["app/scripts/templates/projects/news-index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["app/scripts/templates/projects/projects-index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
@@ -874,7 +800,7 @@ function program1(depth0,data) {
   return buffer;
   });
 
-this["JST"]["app/scripts/templates/projects/news-item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["app/scripts/templates/projects/projects-item.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression, self=this;
@@ -960,7 +886,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.content) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.content); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</p>\n			\n			<time datetime=\"";
+  buffer += "</p>\n			<time datetime=\"";
   if (helper = helpers.date) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.date); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -968,8 +894,17 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.prettyDate) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.prettyDate); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</time>\n		</div>\n		\n	</div>\n</div>\n";
+  buffer += "</time>\n		</div>\n	</div>\n</div>\n";
   return buffer;
+  });
+
+this["JST"]["app/scripts/templates/static/commission.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"about__commission\">\n  <h2 class=\"about__title\">\n    Comisssão de acompanhamento\n  </h2>\n  <p>\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur, doloribus explicabo fugit nam obcaecati omnis repudiandae sunt vel? Adipisci assumenda beatae consequuntur eum fugit iste libero optio suscipit tempore.\n  </p>\n  <p>\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate distinctio facere ipsa minus, porro totam? Eius magnam nesciunt perspiciatis possimus quasi sapiente sint voluptatem? Laboriosam magni maxime quidem sequi sint.\n  </p>\n\n  <section class=\"about__commission__section\">\n    <div class=\"about__commission__col\">\n      <div class=\"about__commission__col__thumb\"></div>\n      <div class=\"about__commission__col__desc\">\n        <h3 class=\"about__commission__col__name\">John Doe</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n      </div>\n    </div>\n    <div class=\"about__commission__col\">\n      <div class=\"about__commission__col__thumb\"></div>\n      <div class=\"about__commission__col__desc\">\n        <h3 class=\"about__commission__col__name\">John Doe</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n      </div>\n    </div>\n    <div class=\"about__commission__col\">\n      <div class=\"about__commission__col__thumb\"></div>\n      <div class=\"about__commission__col__desc\">\n        <h3 class=\"about__commission__col__name\">John Doe</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem cupiditate earum est eveniet, fugiat iure minus pariatur perferendis placeat quam quasi quo quos sapiente soluta temporibus vel, veniam voluptatum?</p>\n      </div>\n    </div>\n  </section>\n</div>";
   });
 
 this["JST"]["app/scripts/templates/static/contacts.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -992,6 +927,24 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n      </a>\n    </div>\n  </div>\n</div>\n\n<div class=\"contacts__form\">\n  <form>\n    <label for=\"name\" class=\"form-name-label\">\n      <p>Nome</p>\n      <input type=\"text\" name=\"name\" id=\"form-name\" class=\"form-name-input\" placeholder=\"\">\n    </label>\n\n    <label for=\"email\" class=\"form-email-label\">\n      <p>Email</p>\n      <input type=\"email\" name=\"_replyto\" id=\"form-email\" class=\"form-email\" placeholder=\"\">\n    </label>\n\n    <label for=\"message\" class=\"form-message-label\">\n      <p>Mensagem</p>\n      <textarea name=\"message\" id=\"form-message\" class=\"form-message\" placeholder=\"\"> </textarea>\n    </label>\n\n    <input type=\"submit\" id=\"form-send\" class=\"form-send\" value=\"Enviar\">\n  </form>\n</div>\n\n";
   return buffer;
+  });
+
+this["JST"]["app/scripts/templates/static/mission.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"about__mission\">\n\n  <h2 class=\"about__title\">Missão </h2>\n\n  <p>O <span>Centro de Investigação em Saúde Pública (CISP) /  Public Health Research Center (PHRC)</span> é o primeiro\n    centro de investigação reconhecido pela\n    <a href=\"http://www.fct.pt/\">Fundação para a Ciência e a Tecnologia</a> exclusivamente dedicado à Saúde Pública. Tem\n    como missão realizar, desenvolver e promover a investigação em Saúde Pública, tendo em vista a criação de\n    conhecimento que possa ser colocado ao serviço da melhoria da saúde das populações.</p>\n\n  <p>Investigar em Saúde Pública é contribuir para a compreensão da saúde das populações e analisar o papel central dos\n    sistemas e organizações de saúde, no sentido mais tradicional da Saúde Pública. Mas significa também orientar este\n    esforço de compreensão para os desafios mais emergentes, atuais e complexos da Saúde Pública: envelhecimento,\n    aumento das doenças crónicas, endemias, epidemias e pandemias, crises económicas e crescimento insustentável das\n    despesas de saúde, desigualdades e iniquidades em saúde, ameaças ambientais, desenvolvimento tecnológico e terapias\n    inovadoras, segurança do doente e qualidade dos cuidados de saúde.</p>\n\n  <p>A missão do CISP é inspirada e motivada por estes desafios, aos quais responde não apenas com a ciência e com a\n    investigação que realiza, mas também com o estabelecimento de pontes com a sociedade e o envolvimento no apoio ao\n    desenho de políticas de saúde, de acordo com as melhores práticas em Saúde Pública, a nível nacional e\n    internacional.</p>\n\n  <p>O CISP está sediado na <a href=\"http://www.ensp.unl.pt/ensp\">Escola Nacional de Saúde Pública</a> (ENSP) da <a\n    href=\"http://www.unl.pt/pt/\">Universidade NOVA de Lisboa</a>, que está na génese da sua criação. À imagem das\n    atividades da ENSP, a investigação realizada no CISP é multi e transdisciplinar, e resulta do trabalho de\n    <a href=\"http://www.aasilva.com/cisp/front-end/#sobre/membros\"></a>especialistas em áreas tão diversas como a saúde\n    ocupacional, promoção da saúde, gestão em saúde, economia da saúde, epidemiologia e estatística, direito e ética em\n    saúde e políticas de saúde.</p>\n\n  <p>O CISP colabora com diversos centros de investigação nacionais e internacionais na área da saúde e é aberto a todos\n    os investigadores que desejem contribuir para o objetivo comum de uma investigação em Saúde Pública de alta\n    qualidade, reconhecida em Portugal e no mundo.</p>\n</div>\n</div>";
+  });
+
+this["JST"]["app/scripts/templates/static/thematic.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"about__thematic\">\n		<h3 class=\"about__title\">Linhas temáticas</h3>\n\n		<img src=\"images/about//organogram.svg\" alt=\"CISP - scientific comission organogram\">\n</div>";
   });
 
 return this["JST"];

@@ -8,7 +8,7 @@ define([
 	'views/footer/footer',
 	'views/header/header',
 
-	'views/header/heroSection',
+	'../views/common/heroSection',
 	'views/header/menu'
 ], function ($, Backbone,
 						 PageCollection, PageModel,
@@ -22,6 +22,7 @@ define([
 		initialize: function () {
 			App.Vent.on('common:footer', this._footer, this);
 			App.Vent.on('common:header', this._header, this);
+			App.Vent.on('common:hero', this._heroSection, this);
       App.Vent.on('common:alert', this._alert, this);
 		},
 
@@ -89,13 +90,12 @@ define([
 		*	@param {string} catg - page context
 		*/
 		_header: function (catg) {
-			App.Views.Header = new HeaderView({
-				catg: catg
-			});
 			requestAnimationFrame(function () {
-				App.Header.html(App.Views.Header.render().el);
+        App.Views.Header = new HeaderView({
+          el: '#header',
+          catg: catg
+        }).render();
 			});
-			this._heroSection(catg);
 			this._menu();
 		},
 
@@ -138,20 +138,8 @@ define([
 		*	@param {string} catg - page context
 		*/
 		_heroSection: function (catg) {
-			var lastClass = $('#header').attr('class').split(' ')[1];
-
-			if ( lastClass ) {
-				$('#header').removeClass(lastClass);
-			}
-
-			$('#header').addClass(catg);
-
-			if ( !catg ) {
-				catg = 'home';
-				$('#hero-section').addClass('active');
-			} else {
-				$('#hero-section').removeClass('active');
-			}
+      $('#hero-section').removeAttr('class');
+      $('#hero-section').addClass('hero-section ' + catg);
 
 			requestAnimationFrame(function () {
 				App.Views.HeroSection = new HeroSectionView({

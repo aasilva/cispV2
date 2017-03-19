@@ -1,0 +1,45 @@
+.hero-section {
+
+  &__container {
+    @include _(limited-full-width);
+  }
+  color: $white;
+
+  height: 60px;
+
+  background-image: url(../images/hero/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+
+  &__claim {
+    @include _(title-about);
+  }
+
+  &__text {
+    margin-top: 12px;
+  }
+
+  &.home {
+    height: 300px;
+    @include _(flex);
+    @include _(align-items-center);
+  }
+
+  &.missao,
+  &.linhas-tematicas,
+  &.comissao-acompanhamento {
+    background-position: 0 -375px;
+  }
+  &.membros,
+  &.contactos {
+    background-image: url(../images/hero/hero-bg-third.jpg);
+  }
+
+  &.projetos,
+  &.bolsas,
+  &.publicacoes,
+  &.noticias,
+  &.eventos {
+    background-image: url(../images/hero/hero-bg-secondary.jpg);
+  }
+}

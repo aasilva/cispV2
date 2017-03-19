@@ -21,16 +21,15 @@ define([
 		},
 
 		parse: function(response, options)  {
-			var res = response.post || response;
-			var d = res.date.split('-');
-			var months = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'];
+      var res = response.post || response;
+      var d = res.date.split(' ')[0].split('-');
+      var months = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'];
 
-			res.prettyDate = months[parseInt(d[1], 10) - 1] + '<br>' + d[0];
+      res.month = months[parseInt(d[1], 10) - 1];
+      res.day =  + d[2];
+      res.day = res.day < 10 ? '0' + res.day : res.day;
 
-			// calculate Estimated Reading Time
-			res.ert = Math.ceil((res.content.split(' ').length / 250));
-
-			return res;
+      return res;
 		}
 	});
 

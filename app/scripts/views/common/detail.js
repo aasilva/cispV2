@@ -20,7 +20,7 @@ define([
 
 		className: 'page-detail',
 
-		events: {},
+		events: {}
 	});
 
 	return PostsDetailView;

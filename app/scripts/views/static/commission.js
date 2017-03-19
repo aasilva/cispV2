@@ -9,7 +9,7 @@ define([
   'use strict';
 
   var CommissionView = Backbone.BaseView.extend({
-    template: JST['app/scripts/templates/about/commission.hbs'],
+    template: JST['app/scripts/templates/static/commission.hbs'],
 
     tagName: 'div',
 

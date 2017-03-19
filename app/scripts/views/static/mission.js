@@ -9,7 +9,7 @@ define([
   'use strict';
 
   var MissionView = Backbone.BaseView.extend({
-    template: JST['app/scripts/templates/about/mission.hbs'],
+    template: JST['app/scripts/templates/static/mission.hbs'],
 
     tagName: 'div',
 

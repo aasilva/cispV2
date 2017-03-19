@@ -1,0 +1,32 @@
+.home__section__event {
+  position: relative;
+  display: flex;
+  margin-bottom: 16px;
+
+  &:after {
+    content: '';
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 1px;
+    background-color: $gray-dates;
+  }
+
+  .event-item__date {
+    margin-right: 12px;
+    max-height: 100px;
+  }
+
+  .event-item__content {
+    padding: 0;
+    border: none;
+
+    svg {
+      rect {
+        fill: $gray-dates;
+      }
+    }
+  }
+}

@@ -1,56 +1,33 @@
 .home__section__publication {
-	//@include flex(1);
 	@include _(flex);
-	position: relative;
-	width: calc(33.333% - 24px);
-	margin: 0 24px 16px 0;
-	padding-right: 8px;
-	padding-bottom: 28px;
-	min-width: 190px;
-	border-bottom: 2px solid $light-gray;
-	
+	margin-right: 12px;
+	margin-bottom: 12px;
+	//width: calc(100% / 3 - 24px);
+	flex: 1;
 
-	@include breakpoint(medium){
-		width: 100%;
+	&:last-of-type {
 		margin-right: 0;
 	}
-	
-	&:hover {
-		border-bottom: 2px solid $blue-mariner;
-	}
 
-	h4 {
-		margin: 8px 0;
-	}
-
-	p {
-		color: $dark-gray;
-
-		a {
-			display: none;
-		}
-	}
-
-	a {
+	&__thumb {
 		@include _(flex);
+		@include _(flex-column);
 		@include _(align-items-center);
-		margin-top: 64px;
-		padding-left: 8px;
+		@include _(justify-content-center);
+		margin-right: 16px;
+		padding: 8px;
+		min-width: 100px;
+		max-height: 100px;
 
-		svg {
-			margin-right: 16px;
-		}
-	}
-
-	time {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		padding: 6px 8px;
-		background-color: $blue-mariner;
-		font-size: 13px;
-		font-weight: 300;
 		text-align: center;
+		border-radius: 8px;
+		background-color: $blue-publications;
 		color: $white;
+
+		&__day {
+			margin-bottom: 4px;
+			font-size: 48px;
+			font-weight: 900;
+		}
 	}
 }

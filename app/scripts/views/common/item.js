@@ -15,6 +15,7 @@ define([
 		tagName: 'article',
 
 		id: function () {
+			console.log('!!!');
 			return 'page-' + this.model.get('id');
 		},
 

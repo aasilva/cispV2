@@ -10,11 +10,7 @@ define([
 	'use strict';
 
 	var HeaderContainerView = Backbone.BaseView.extend({
-		template: JST['app/scripts/templates/header/index.hbs'],
-
-		tagName: 'section',
-
-		className: 'header__container',
+		template: JST['app/scripts/templates/header/header.hbs'],
 
 		events: {
 			'click #logo': '_returnHome'

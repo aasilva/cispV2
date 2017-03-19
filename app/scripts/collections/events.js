@@ -19,6 +19,13 @@ define([
 		},
 
 		parse: function (res) {
+			console.log(res);
+
+			_.each(res.posts, function(event){
+				event.date = event.custom_fields.when[0].split(' ')[0].replace('.','-').replace('.','-');
+				console.log(event.date);
+      });
+
 			this.totalPosts = res.count_total;
 			return res.posts;
 		}

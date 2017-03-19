@@ -1,16 +1,16 @@
-<div class="home__section__new__content">
-	<h4>{{title}}</h4>
-	<p>{{{custom_fields.excerpt}}}</p>
-
-	{{#if custom_fields.when}}
-	<div class="home__section__new__content__when"><span>Quando: </span>{{custom_fields.when}}</div>
-	{{/if}}
-
-	{{#if custom_fields.when}}
-	<div class="home__section__new__content__where"><span>Onde: </span>{{custom_fields.where}}</div>
-	{{/if}}
-
-	<a href="#eventos/{{slug}}">{{{view 'icons/ic_arrow-right'}}} Saber mais</a>
+<div class="event-item__date">
+  <div class="event-item__date__day">{{day}}</div>
+  <div class="event-item__month">{{month}}</div>
 </div>
 
-{{!-- <div class="home__section__new__image" style="background-image: url({{thumbnail}})"> </div> --}}
+<div class="event-item__content">
+  <div class="event-item__content__title">{{{title}}}</div>
+  <div class="event-item__content__excerpt">{{{custom_fields.excerpt}}}</div>
+
+  <div class="event-item__content__when">{{custom_fields.when}}</div>
+  <div class="event-item__content__where">{{custom_fields.where}}</div>
+
+  <a href="#eventos/{{slug}}" class="more-button">
+    {{{view 'icons/ic_more-button'}}}
+  </a>
+</div>

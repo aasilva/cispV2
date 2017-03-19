@@ -1,113 +1,49 @@
 .home__section__new {
-	@include _(flex);
-	@include flex(1);
-	position: relative;
-	margin: 0 24px 16px 0;
-	padding-right: 8px;
-	padding-bottom: 8px;
-	min-width: 190px;
-	border-bottom: 2px solid $light-gray;
+  position: relative;
+  display: flex;
+  margin-bottom: 16px;
 
-	@include breakpoint(medium){
-		width: 100% !important;
-		flex: auto;
-		margin-right: 0;
-	}
+  &:after {
+    content: '';
+    position: absolute;
 
-	@include breakpoint(small) {
-		@include _(flex-wrap);
-	}
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 1px;
+    background-color: $gray-dates;
+  }
 
-	&:after {
-		content:'';
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		height: 10%;
-		width: 2px;
-		background: $light-gray;
-	}
+  &__thumb {
+    width: 40%;
+    height: 100px;
+    background-size: cover;
+    background-position: 0 0;
+  }
 
-	&--large {
-		@include flex(2);
-		min-width: 340px;
-		border-bottom: 3px solid $blue;
+  &__content {
+    @include _(flex);
+    @include _(flex-column);
+    @include _(space-between);
 
-		&:after {
-			width: 3px;
-			background: $blue;
-		}
-	}
+    margin: 0 0 0 12px;
+    width: calc(60% - 8px);
 
-	&__content {
-		@include flex-grow(1);
-		min-width: 50%;
+    h4 {
+      margin: 0;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
 
-		@include breakpoint(small) {
-			order: 2;
-			width: 100%;
-		}
+    .more-button {
+      @include _(flex);
+      @include _(align-self-bottom);
 
-		&__when,
-		&__where {
-			margin-top: 8px;
-
-			span {
-				font-weight: 700;
-			}
-		}
-	}
-
-	&__image {
-		@include flex-grow(1);
-		min-width: 50%;
-		background-position: center;
-		background-size: cover;
-
-		@include breakpoint(small) {
-			order: 1;
-			width: 100%;
-			height: 40px;
-		}
-	}
-
-	h4 {
-		margin: 8px 0;
-	}
-
-	p {
-		color: $dark-gray;
-
-		a {
-			display: none;
-		}
-	}
-
-	a {
-		@include _(flex);
-		@include _(align-items-center);
-		margin-top: 16px;
-		padding-left: 8px;
-
-		svg {
-			margin-right: 16px;
-		}
-	}
-
-	img {
-		width: 250px;
-		height: 180px;
-	}
-}
-
-.load-more {
-	margin: 32px auto;
-	padding: 4px 0 4px 8px;
-	text-align: center;
-	border: 2px solid #444;
-	letter-spacing: 8px;
-
-	&:hover {
-		cursor: pointer;
-	}
+      svg {
+        rect {
+          fill: $gray-dates;
+        }
+      }
+    }
+  }
 }
