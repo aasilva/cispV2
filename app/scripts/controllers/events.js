@@ -5,8 +5,8 @@ define([
 	'backbone',
 	'collections/events',
 	'models/events',
-	'views/events/index',
-	'views/events/detail'
+	'views/events/events-index',
+	'views/events/events-detail'
 ], function ($, Backbone, EventsCollection, EventModel, EventsListView, EventDetailView) {
 	'use strict';
 

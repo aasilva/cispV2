@@ -1,0 +1,27 @@
+.members-container {
+  padding:16px 0 32px 0;
+}
+
+.member-item {
+  width: calc(100% / 4);
+  min-width: 200px;
+
+  a {
+    display: block;
+  }
+
+  &__thumbnail {
+    margin: 0 auto;
+    position: relative;
+    height: 170px;
+    width: 170px;
+    background-size: cover;
+    background-position: 20% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &__name {
+    margin: 12px 0;
+    text-align: center;
+  }
+}

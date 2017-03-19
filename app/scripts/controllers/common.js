@@ -6,7 +6,7 @@ define([
 
 	'views/common/alert-view',
 	'views/footer/footer',
-	'views/header/index',
+	'views/header/header',
 
 	'views/header/heroSection',
 	'views/header/menu'

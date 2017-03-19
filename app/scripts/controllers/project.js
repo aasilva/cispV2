@@ -5,7 +5,7 @@ define([
 	'backbone',
 	'collections/projects',
 	'models/project',
-	'views/projects/index'
+	'views/projects/projects-index'
 ], function ($, Backbone, ProjectCollection, ProjectModel, ProjectListView) {
 	'use strict';
 

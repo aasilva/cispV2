@@ -26,6 +26,11 @@ body {
 	@include _(limited-full-width);
 	min-height: 100%;
 	z-index: 1;
+	padding: 0 20px;
+
+	@include breakpoint(small) {
+		padding: 5px;
+	}
 }
 
 @import "_components/_header/_header",
@@ -35,20 +40,23 @@ body {
 		"_components/_spinner",
 		"_components/_posts/_posts",
 		"_global",
-		"_home/_index",
-		"_home/_news",
-		"_home/_publications",
-		"_projects/_index",
-		"_about/_index",
-		"_news/_index",
-		"_news/_detail",
-		"_events/_index",
-		"_events/_detail",
-		"_members/_index",
-		"_members/_detail",
-		"_publications/_item",
+		"_home/_home-index",
+		"_home/_home-news",
+		"_home/_home-publications",
+		"_projects/_projects-index",
+		"_about/_about-index",
+		"_news/_news-index",
+		"_news/_news-detail",
+		"_events/_events-index",
+		"_events/_events-detail",
+		"_members/_members-index",
+		"_members/_members-detail",
+		"_publications/_publications-item",
 		"_grants/_grants-index",
 		"_static/_contacts",
+		"_static/_mission",
+		"_static/_commission",
+		"_static/_thematic",
 		"_common/_alert";
 
 .invisible {

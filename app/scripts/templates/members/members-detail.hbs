@@ -1,0 +1,30 @@
+<a href="#membros" class="close" id="detail-close">{{{view 'icons/ic_close'}}}</a>
+
+<section class="member-detail__person">
+  <div class="member-detail__person__thumb" style="background-image: url({{#if
+    thumbnail_images.post-thumbnail.url}}{{thumbnail_images.post-thumbnail.url}}{{else}}images/default_thumbnail.png{{/if}})"
+       alt="{{{title}}}"></div>
+
+  <div class="member-detail__person__info">
+    <p class="member-detail__person__info__name">{{{title}}}</p>
+    {{#if custom_fields.member_email}}
+      <p class="member-detail__person__info__email">
+        <span>EMAIL:</span>{{custom_fields.member_email}}
+      </p>
+    {{/if}}
+
+    {{#if custom_fields.member_orcid}}
+      <p class="member-detail__person__info__orcid">
+        <span>ORCID:</span>{{custom_fields.member_orcid}}
+      </p>
+    {{/if}}
+  </div>
+</section>
+
+<section class="member-detail__list" id="member-publications">
+  {{{view "components/spinner"}}}
+</section>
+
+<section class="member-detail__list" id="member-projects">
+  {{{view "components/spinner"}}}
+</section>

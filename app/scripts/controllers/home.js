@@ -11,9 +11,8 @@ define([
 	'views/home/publicationsItem',
 	'collections/news',
 	'collections/events',
-	'collections/seminars',
-	'collections/publications',
-], function ($, Backbone, HomeView, NewsListView, NewsItemView, EventsListView, EventsItemView, PublicationsListView, PublicationsItemView, NewsCollection, EventsCollection, SeminarsCollection, PublicationsCollection) {
+	'collections/publications'
+], function ($, Backbone, HomeView, NewsListView, NewsItemView, EventsListView, EventsItemView, PublicationsListView, PublicationsItemView, NewsCollection, EventsCollection, PublicationsCollection) {
 	'use strict';
 	/**
 	*	HomeController module.

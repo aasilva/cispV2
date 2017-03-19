@@ -1,0 +1,94 @@
+.member-detail {
+  @include _(flex);
+  @include _(flex-wrap);
+
+  height: 100%;
+  padding: 16px 0 32px 0;
+  position: relative;
+
+  .close {
+    position: absolute;
+    top: 8px;
+    right: -8px;
+    color: #999;
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__person {
+    @include _(flex);
+    @include _(flex-wrap);
+
+    width: 100%;
+
+    &__thumb {
+      position: relative;
+      margin-left: 80px;
+      margin-right: 20px;
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+
+    &__info {
+
+      &__name {
+        margin-bottom: 20px;
+        font-weight: 900;
+      }
+
+      &__email {
+        margin-bottom: 10px;
+        span {
+          margin-right: 8px;
+          font-weight: 700;
+        }
+      }
+
+      &__orcid {
+        span {
+          margin-right: 8px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__list {
+    flex: 1;
+
+    margin: 0 20px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__article {
+    width: 100%;
+    position: relative;
+    margin-top: 24px;
+    padding-bottom: 8px;
+
+    &__title {
+      margin: 8px 0 16px 0;
+      font-size: 18px;
+    }
+
+    &__text {
+      p {
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

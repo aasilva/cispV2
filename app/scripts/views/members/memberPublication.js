@@ -14,10 +14,6 @@ define([
 
 		tagName: 'article',
 
-		id: function () {
-			return 'member-' + this.model.get('id');
-		},
-
 		className: 'post-list__member--publication',
 
 		events: {},

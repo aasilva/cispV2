@@ -9,12 +9,16 @@ define([
 ], function ($, _, Backbone, JST) {
 	'use strict';
 
-	var MemberProjectView = Backbone.BaseView.extend({
-		template: JST['app/scripts/templates/members/memberProject.hbs'],
+	var NewsItemView = Backbone.BaseView.extend({
+		template: JST['app/scripts/templates/news/news-item.hbs'],
 
 		tagName: 'article',
 
-		className: 'post-list__member--project',
+		id: function () {
+			return 'new-' + this.model.get('id');
+		},
+
+		className: 'new-item',
 
 		events: {},
 
@@ -37,5 +41,5 @@ define([
 		}
 	});
 
-	return MemberProjectView;
+	return NewsItemView;
 });

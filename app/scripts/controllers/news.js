@@ -5,8 +5,8 @@ define([
 	'backbone',
 	'collections/news',
 	'models/news',
-	'views/news/index',
-	'views/news/detail'
+	'views/news/news-index',
+	'views/news/news-detail'
 ], function ($, Backbone, NewsCollection, NewsModel, NewsListView, NewsDetailView) {
 	'use strict';
 

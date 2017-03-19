@@ -6,8 +6,8 @@ define([
 	'collections/publications',
 	'collections/author',
 	'collections/categories',
-	'views/publications/index',
-	'views/publications/filters'
+	'views/publications/publications-index',
+	'views/publications/publications-filters'
 ], function ($, Backbone, PublicationCollection, AuthorCollection, CategoriesCollection, PublicationListView, FiltersView) {
 	'use strict';
 

@@ -6,7 +6,6 @@ define([
 	'templates',
   'controllers/common',
 	'controllers/home',
-	'controllers/about',
   'controllers/static',
 	'controllers/publication',
 	'controllers/news',
@@ -14,7 +13,7 @@ define([
 	'controllers/members',
 	'controllers/project',
 	'controllers/grants'
-], function ($, Backbone, JST, CommonController, HomeController, AboutController, StaticController, PublicationController, NewsController, EventsController, MembersController, ProjectController, GrantsController) {
+], function ($, Backbone, JST, CommonController, HomeController, StaticController, PublicationController, NewsController, EventsController, MembersController, ProjectController, GrantsController) {
 	'use strict';
 
 	var Router = Backbone.Router.extend({
@@ -35,9 +34,6 @@ define([
 
 			if ( !App.Controllers.Home ) {
 				App.Controllers.Home = new HomeController;
-			}
-			if ( !App.Controllers.About ) {
-				App.Controllers.About = new AboutController;
 			}
 			if ( !App.Controllers.Static ) {
 				App.Controllers.Static = new StaticController;
@@ -144,9 +140,6 @@ define([
 			this._common(catg);
 			this._loading();
 
-			if ( catg === 'sobre' ) {
-				App.Vent.trigger('about:index');
-			} else
 			if ( catg === 'noticias' ) {
 				App.Vent.trigger('news:index');
 			} else
@@ -167,6 +160,15 @@ define([
 			}else
 			if ( catg === 'contactos' ) {
 				App.Vent.trigger('static:contacts');
+			}else
+			if ( catg === 'missao' ) {
+				App.Vent.trigger('static:mission');
+			}else
+			if ( catg === 'comissao-acompanhamento' ) {
+				App.Vent.trigger('static:commission');
+			}else
+			if ( catg === 'linhas-tematicas' ) {
+				App.Vent.trigger('static:thematic');
 			}
 		},
 
@@ -182,16 +184,12 @@ define([
 			this._common(catg);
 			this._loading();
 
-			if ( catg === 'sobre' ) {
-				App.Vent.trigger('about:index', {
-					slug: slug
-				});
-			} else
 			if ( catg === 'membros' ) {
-				App.Vent.trigger('members:detail', {
-					slug: slug
-				});
-			} if ( catg === 'publicacoes' ) {
+        App.Vent.trigger('members:detail', {
+          slug: slug
+        });
+      } else
+      if ( catg === 'publicacoes' ) {
 				App.Vent.trigger('publications:index', {
 					slug: slug
 				});

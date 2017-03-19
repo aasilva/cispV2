@@ -5,7 +5,7 @@ define([
     'underscore',
     'backbone',
     'templates',
-    'views/members/item',
+    'views/members/members-item',
     'collectionview'
 ], function ($, _, Backbone, JST, MembersItemView) {
     'use strict';
@@ -17,7 +17,7 @@ define([
 
         id: 'associatedList',
 
-        className: 'posts-list associated-list',
+        className: 'posts-list posts-list--members',
 
         events: {
         },
