@@ -6,8 +6,9 @@
 define([
 	'underscore',
 	'handlebars',
-	'templates'
-], function (_, Handlebars, JST) {
+	'templates',
+	'text!locales/i18n/resource.json'
+], function (_, Handlebars, JST, i18n) {
 	'use strict';
 
 	/**

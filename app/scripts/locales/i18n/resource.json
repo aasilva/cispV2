@@ -1,1 +1,12 @@
-{}
+{
+    "en": {
+        "news_title": "News",
+        "events_title": "Events",
+        "publications_title": "Publications"
+    },
+    "pt": {
+        "news_title": "Notícias",
+        "events_title": "Eventos",
+        "publications_title": "Publications"
+    }
+}

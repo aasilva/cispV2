@@ -19,6 +19,8 @@ define([
   var Router = Backbone.Router.extend({
     routes: {
       ':category/:slug(/)': '_detail',
+      'pt': '_changeLocalePt',
+      'en': '_changeLocaleEn',
       ':category(/)': '_category',
       '(/)': '_index'
     },
@@ -31,7 +33,6 @@ define([
      *   @public
      */
     initialize: function () {
-
       if (!App.Controllers.Home) {
         App.Controllers.Home = new HomeController;
       }
@@ -107,6 +108,28 @@ define([
     _index: function () {
       this._common('home'); // added argument home for hero section context (catg is undefined when it's home)
       App.Vent.trigger('home:index');
+    },
+
+    /**
+     *   _changeLocalePt - change locale to pt
+     *
+     *   @private
+     *   @function
+     */
+    _changeLocalePt: function () {
+      App.Vent.trigger('i18n:locale', 'pt');
+      Backbone.history.history.back();
+    },
+
+    /**
+     *   _changeLocaleEn - change locale to en
+     *
+     *   @private
+     *   @function
+     */
+    _changeLocaleEn: function () {
+      App.Vent.trigger('i18n:locale', 'en');
+      Backbone.history.history.back();
     },
 
     /**

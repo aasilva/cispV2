@@ -198,7 +198,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<div class=\"header__container\">\n  <a href=\"/#\" class=\"logo\" id=\"logo\">\n    <div class=\"logo--cisp\">\n      ";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_logo-v02", options) : helperMissing.call(depth0, "view", "icons/ic_logo-v02", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    </div>\n    <div class=\"logo--ensp\"></div>\n  </a>\n\n  <div class=\"header__wrapper\">\n\n    <div class=\"nav--lang\">\n      <a href=\"#\" class=\"active\">PT</a>\n      <a href=\"#\">EN</a>\n    </div>\n\n    <div id=\"menu\" class=\"menu\"></div>\n\n  </div>\n</div>";
+  buffer += "\n    </div>\n    <div class=\"logo--ensp\"></div>\n  </a>\n\n  <div class=\"header__wrapper\">\n\n    <div class=\"nav--lang\">\n      <a href=\"#pt\" class=\"active\">PT</a>\n      <a href=\"#en\">EN</a>\n    </div>\n\n    <div id=\"menu\" class=\"menu\"></div>\n\n  </div>\n</div>";
   return buffer;
   });
 
@@ -257,10 +257,13 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/home/eventsList.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "", helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  return "<h2 class=\"home__section__wrapper__title\"><a href=\"#eventos\">Eventos</a></h2>\n";
+  buffer += "<h2 class=\"home__section__wrapper__title\"><a href=\"#eventos\">"
+    + escapeExpression((helper = helpers.t || (depth0 && depth0.t),options={hash:{},data:data},helper ? helper.call(depth0, "events_title", options) : helperMissing.call(depth0, "t", "events_title", options)))
+    + "</a></h2>\n";
+  return buffer;
   });
 
 this["JST"]["app/scripts/templates/home/home-index.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -313,10 +316,13 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/home/newsList.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "", helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  return "<h2 class=\"home__section__wrapper__title\"><a href=\"#noticias\">Notícias</a></h2>";
+  buffer += "<h2 class=\"home__section__wrapper__title\"><a href=\"#noticias\">"
+    + escapeExpression((helper = helpers.t || (depth0 && depth0.t),options={hash:{},data:data},helper ? helper.call(depth0, "news_title", options) : helperMissing.call(depth0, "t", "news_title", options)))
+    + "</a></h2>";
+  return buffer;
   });
 
 this["JST"]["app/scripts/templates/home/publicationsItem.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -344,10 +350,13 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/scripts/templates/home/publicationsList.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "", helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  return "<h2 class=\"home__section__wrapper__title\"><a href=\"#publicacoes\">Publicações</a></h2>";
+  buffer += "<h2 class=\"home__section__wrapper__title\"><a href=\"#publicacoes\">"
+    + escapeExpression((helper = helpers.t || (depth0 && depth0.t),options={hash:{},data:data},helper ? helper.call(depth0, "publications_title", options) : helperMissing.call(depth0, "t", "publications_title", options)))
+    + "</a></h2>";
+  return buffer;
   });
 
 this["JST"]["app/scripts/templates/icons/ic_arrow-right.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
