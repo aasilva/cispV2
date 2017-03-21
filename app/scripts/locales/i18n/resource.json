@@ -7,11 +7,20 @@
         "menu_projects": "Projects",
         "menu_scholarships": "Scholarships",
         "menu_contacts": "Contacts",
-        "sub_menu_mission": "Misson",
+        "sub_menu_mission": "Mission",
         "sub_menu_thematic_lines": "Thematic Lines",
         "sub_menu_members": "Members",
         "sub_menu_monitoring_committee": "Monitoring Committee",
-        "footer_receive_announcements": "Receive CISP's announcements"
+        "footer_receive_announcements": "Receive CISP's announcements",
+        "mission_title": "Mission",
+        "thematic_lines_title": "Thematic Lines",
+        "effective_members_title": "Effective Members",
+        "associated_members_title": "Associated Members",
+        "more": "MORE",
+        "form_name": "Name",
+        "form_email": "E-mail",
+        "form_message": "Message",
+        "collab": "Collab with"
     },
     "pt": {
         "news_title": "Notícias",
@@ -25,6 +34,15 @@
         "sub_menu_thematic_lines": "Linhas Temáticas",
         "sub_menu_members": "Membros",
         "sub_menu_monitoring_committee": "Comissão de acompanhamento",
-        "footer_receive_announcements": "Receba as divulgações do CISP"
+        "footer_receive_announcements": "Receba as divulgações do CISP",
+        "mission_title": "Missão",
+        "thematic_lines_title": "Linhas temáticas",
+        "effective_members_title": "Membros Efectivos",
+        "associated_members_title": "Membros Associados",
+        "more": "MAIS",
+        "form_name": "Nome",
+        "form_email": "E-mail",
+        "form_message": "Mensagem",
+        "collab": "Colabore com"
     }
 }

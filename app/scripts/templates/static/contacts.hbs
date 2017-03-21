@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h2 class="page-header__title">Contactos</h2>
+  <h2 class="page-header__title">{{t "menu_contacts"}}</h2>
 </div>
 
 <div class="contacts__content">
@@ -19,7 +19,7 @@
 
     <div class="link-wrapper">
       <a href="#contactos/colaborar-com-cisp">
-        Colaborar com o cisp
+        {{t "collab"}} CISP
         {{{view 'icons/ic_more-button'}}}
       </a>
     </div>
@@ -29,17 +29,17 @@
 <div class="contacts__form">
   <form>
     <label for="name" class="form-name-label">
-      <p>Nome</p>
+      <p>{{t "form_name"}}</p>
       <input type="text" name="name" id="form-name" class="form-name-input" placeholder="">
     </label>
 
     <label for="email" class="form-email-label">
-      <p>Email</p>
+      <p>{{t "form_email"}}</p>
       <input type="email" name="_replyto" id="form-email" class="form-email" placeholder="">
     </label>
 
     <label for="message" class="form-message-label">
-      <p>Mensagem</p>
+      <p>{{t "form_message"}}</p>
       <textarea name="message" id="form-message" class="form-message" placeholder=""> </textarea>
     </label>
 
