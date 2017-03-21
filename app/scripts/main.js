@@ -48,18 +48,11 @@ define([
 	// Setup App SEO
 	App.enableSEO = false;
 
-	// Setup App Internationalization Model
-	//App.i18n = new I18n;
-
 	// Setup App Default Language
 	App.defaultLocale = 'en';
 
-	App.locale = window.localStorage.getItem('locale') || App.defaultLocale;
-
-	App.setLanguage = function (newLocale) {
-		App.locale = newLocale;
-		window.localStorage.setItem('locale', newLocale);
-	};
+	// Setup App Internationalization Model
+	App.i18n = new I18n;
 
 	// Setup App User Model
 	// App.User.fetch().then(function () {

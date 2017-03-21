@@ -24,8 +24,10 @@ define([
 		*   @this i18n 
 		*/
 		initialize: function() {
-			this.listenTo(App.User, 'change:language', this._changeLanguage, this);
-			this.set(JSON.parse(source)[App.defaultLanguage]);
+			var locale = window.localStorage.getItem('locale') || 'en';
+			
+			App.Vent.on('i18n:locale', this._setLocale, this);
+			App.Vent.trigger('i18n:locale', locale);
 		},
 
 		/**
@@ -42,53 +44,17 @@ define([
 		},
 
 		/**
-		*   changeLanguage - change target app language and fetch the appropriate json map
+		*   changelocale - change target app locale and fetch the appropriate json map
 		*
 		*   @private
 		*	@function
 		*   @this i18n
 		*/
-		_changeLanguage: function () {
-			if ( this.getLanguage() !== App.User.get('language') ) {
-				this.setLanguage(App.User.get('language'));
-			}
-			App.Document.documentElement.attributes.lang.value = this.getLanguage();
-		},
-
-		/**
-		*	getLanguage - return the currently selected language code
-		*
-		*	@public
-		*	@function
-		*	@return {string} currentLanguage
-		*/
-		getLanguage: function () {
-			return this.language;
-		},
-
-		/**
-		*	setLanguage - set the currently selected language code
-		*
-		*	@public
-		*	@function
-		*	@param {string} lang
-		*/
-		setLanguage: function (lang) {
-			this.language = lang;
-			this.set(JSON.parse(source)[lang]);
-			return this;
-		},
-
-		/**
-		*	_isSupportedLanguage - test if passed language code is within the supported languages
-		*
-		*	@private
-		*	@function
-		*	@param {string} lang
-		*	@return {boolean}
-		*/
-		isSupportedLanguage: function (lang) {
-			return App.Languages.indexOf(lang) > -1;
+		_setLocale: function (locale) {
+			this.set('locale', locale);
+			window.localStorage.setItem('locale', locale);
+			App.Document.documentElement.attributes.lang.value = locale;
+			this.set(JSON.parse(source)[locale]);
 		}
 	});
 

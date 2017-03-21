@@ -19,6 +19,8 @@ define([
   var Router = Backbone.Router.extend({
     routes: {
       ':category/:slug(/)': '_detail',
+      'pt': '_changeLocalePt',
+      'en': '_changeLocaleEn',
       ':category(/)': '_category',
       '(/)': '_index'
     },
@@ -31,7 +33,6 @@ define([
      *   @public
      */
     initialize: function () {
-
       if (!App.Controllers.Home) {
         App.Controllers.Home = new HomeController;
       }

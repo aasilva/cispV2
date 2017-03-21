@@ -18,7 +18,6 @@ define([
 			'click a': '_navigation'
 		},
 
-
     /**
      *	_openMenu - open menu
      *

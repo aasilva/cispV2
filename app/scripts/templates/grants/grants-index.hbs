@@ -1,9 +1,9 @@
 <div class="post-list__header">
-  <h2 class="post-list__header__title">Bolsas</h2>
+  <h2 class="post-list__header__title">{{t "menu_scholarships"}}</h2>
 </div>
 
 <div id="projects-container" class="projects-container projects"></div>
 
 {{#ifCond this.length '<' this.totalPosts}}
-  <div id="load-more-posts" class="load-more">MAIS</div>
+  <div id="load-more-posts" class="load-more">{{t "more"}}</div>
 {{/ifCond}}
