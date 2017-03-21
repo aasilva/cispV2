@@ -13,7 +13,9 @@ define([
 		template: JST['app/scripts/templates/header/header.hbs'],
 
 		events: {
-			'click #logo': '_returnHome'
+			'click #logo': '_returnHome',
+			'click #pt': '_changeLocalePT',
+			'click #en': '_changeLocaleEN'
 		},
 
 		/**
@@ -24,7 +26,19 @@ define([
 		*/
 		_returnHome: function () {
 			App.Router.navigate('#', { trigger: true });
-		}
+		},
+
+		_changeLocalePT: function () {
+			window.console.debug('pt');
+			App.Vent.trigger('i18n:locale', 'pt');
+			window.location.reload();
+		},
+
+		_changeLocaleEN: function () {
+			window.console.debug('en');
+			App.Vent.trigger('i18n:locale', 'en');
+			window.location.reload();
+		},
 	});
 
 	return HeaderContainerView;

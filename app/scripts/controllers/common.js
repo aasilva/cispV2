@@ -3,19 +3,12 @@
 define([
 	'jquery', 'backbone',
 	'collections/page', 'models/page',
-
 	'views/common/alert-view',
 	'views/footer/footer',
 	'views/header/header',
-
 	'../views/common/heroSection',
 	'views/header/menu'
-], function ($, Backbone,
-						 PageCollection, PageModel,
-
-						 AlertView, FooterView,
-
-						 HeaderView, HeroSectionView, MenuView) {
+], function ($, Backbone, PageCollection, PageModel, AlertView, FooterView, HeaderView, HeroSectionView, MenuView) {
 	'use strict';
 
 	var CommonElementsController = Backbone.Router.extend({
@@ -23,7 +16,7 @@ define([
 			App.Vent.on('common:footer', this._footer, this);
 			App.Vent.on('common:header', this._header, this);
 			App.Vent.on('common:hero', this._heroSection, this);
-      App.Vent.on('common:alert', this._alert, this);
+      		App.Vent.on('common:alert', this._alert, this);
 		},
 
 		/**
@@ -32,7 +25,7 @@ define([
 		*	@private
 		*	@function
 		*	@param {object} options
-		*		@param {string} slug
+		*	@param {string} slug
 		*/
 		_detail: function (options) {
 			var _this = this;
@@ -91,10 +84,11 @@ define([
 		*/
 		_header: function (catg) {
 			requestAnimationFrame(function () {
-        App.Views.Header = new HeaderView({
-          el: '#header',
-          catg: catg
-        }).render();
+				App.Views.Header = new HeaderView({
+					el: '#header',
+					catg: catg,
+					locale: App.i18n.get('locale')
+				}).render();
 			});
 			this._menu();
 		},
@@ -113,22 +107,22 @@ define([
 			});
 		},
 
-    _alert: function (message, closeCallback) {
-      var msg = message || 'Default message';
+		_alert: function (message, closeCallback) {
+		var msg = message || 'Default message';
 
-      App.Views.Alert = new AlertView({
-        model: new Backbone.Model({
-          message: msg
-        })
-      });
+		App.Views.Alert = new AlertView({
+			model: new Backbone.Model({
+			message: msg
+			})
+		});
 
-      App.Body.append(App.Views.Alert.render().el);
+		App.Body.append(App.Views.Alert.render().el);
 
-      if(closeCallback){
-        App.Views.Alert.on("closed", closeCallback);
-      }
+		if(closeCallback){
+			App.Views.Alert.on("closed", closeCallback);
+		}
 
-    },
+		},
 
 		/**
 		*	_heroSection
@@ -138,17 +132,16 @@ define([
 		*	@param {string} catg - page context
 		*/
 		_heroSection: function (catg) {
-      $('#hero-section').removeAttr('class');
-      $('#hero-section').addClass('hero-section ' + catg);
+			$('#hero-section').removeAttr('class');
+			$('#hero-section').addClass('hero-section ' + catg);
 
 			requestAnimationFrame(function () {
 				App.Views.HeroSection = new HeroSectionView({
 					el: '#hero-section',
 					catg: catg
-				}).render();
+					}).render();
 			});
 		}
-
 	});
 
 	return CommonElementsController;

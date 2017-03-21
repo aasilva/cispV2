@@ -111,28 +111,6 @@ define([
     },
 
     /**
-     *   _changeLocalePt - change locale to pt
-     *
-     *   @private
-     *   @function
-     */
-    _changeLocalePt: function () {
-      App.Vent.trigger('i18n:locale', 'pt');
-      Backbone.history.history.back();
-    },
-
-    /**
-     *   _changeLocaleEn - change locale to en
-     *
-     *   @private
-     *   @function
-     */
-    _changeLocaleEn: function () {
-      App.Vent.trigger('i18n:locale', 'en');
-      Backbone.history.history.back();
-    },
-
-    /**
      *   _category - render post listing by category
      *
      *   @private

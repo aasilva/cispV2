@@ -37,6 +37,7 @@
         }
 
         &:hover {
+          cursor: pointer;
           color: $hover-green;
           text-decoration: underline;
         }
