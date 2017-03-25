@@ -69,7 +69,9 @@ define([
 		*	@function
 		*/
 		_footer: function () {
-			App.Views.Footer = new FooterView();
+			App.Views.Footer = new FooterView({
+        locale: App.i18n.get('locale')
+			});
 			requestAnimationFrame(function () {
 				App.Footer.html(App.Views.Footer.render().el);
 			});

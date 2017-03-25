@@ -37,7 +37,7 @@ define([
 	}
 
 	Handlebars.registerHelper('view', viewHelper);
-	
+
 	/**
 	*	@author Andre Silva
 	*	@Version 1.0.0
@@ -79,7 +79,7 @@ define([
 	Handlebars.registerHelper('repeat', function(count, options) {
 
 		var out = "";
-		var c = typeof count === 'number' ? count : 1; 
+		var c = typeof count === 'number' ? count : 1;
 		var i = count - 1;
 
 		for (; i >= 0; i--) {
@@ -96,7 +96,7 @@ define([
 	*/
 	Handlebars.registerHelper('repeatUnless', function(count, options) {
 		var out = "";
-		var c = typeof count === 'number' ? count : 1; 
+		var c = typeof count === 'number' ? count : 1;
 		var i = 5 - count - 1;
 
 		if (!count) i = 4;

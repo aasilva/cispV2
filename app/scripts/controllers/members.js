@@ -77,7 +77,7 @@ define([
 
 		_effectiveMembers: function (members) {
 			App.Views.EffectiveMembers = new EffectiveMembersListView({
-				collection: members,
+				collection: members
 			});
 			requestAnimationFrame(function () {
 				$('#members-effective').html(App.Views.EffectiveMembers.render().el);
@@ -86,7 +86,7 @@ define([
 
 		_associatedMembers: function (members) {
 			App.Views.AssociatedMembers = new AssociatedMembersListView({
-				collection: members,
+				collection: members
 			});
 			requestAnimationFrame(function () {
 				$('#members-associated').html(App.Views.AssociatedMembers.render().el);
@@ -138,7 +138,6 @@ define([
 		*	@param {object} member - member model to be rendered
 		*/
 		_detailView: function (member) {
-			var _this = this;
 			App.Views.Active = new MemberDetailView({
 				model: member
 			});
@@ -146,10 +145,10 @@ define([
 			requestAnimationFrame(function () {
 				App.Container.html(App.Views.Active.render().el);
 				setTimeout(function () {
-					_this._getMemberPublications(member.get('slug'));
-					_this._getMemberProjects(member.get('slug'));
-				}, 200);
-			});
+					this._getMemberPublications(member.get('slug'));
+					this._getMemberProjects(member.get('slug'));
+				}.bind(this), 200);
+			}.bind(this));
 		},
 
 		_getMemberPublications: function (slug) {

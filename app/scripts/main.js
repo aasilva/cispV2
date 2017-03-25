@@ -49,7 +49,7 @@ define([
 	App.enableSEO = false;
 
 	// Setup App Default Language
-	App.defaultLocale = 'en';
+	App.defaultLocale = 'pt';
 
 	// Setup App Internationalization Model
 	App.i18n = new I18n;

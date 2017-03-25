@@ -3,17 +3,17 @@
 define([
 	'underscore',
 	'backbone',
-	'models/grant'
-], function (_, Backbone, GrantModel) {
+	'models/collab'
+], function (_, Backbone, CollabModel) {
 	'use strict';
 
-	var GrantCollection = Backbone.Collection.extend({
+	var CollabCollection = Backbone.Collection.extend({
 		url: function () {
-			var url = App.BaseUrl + '?json=get_posts&post_type=grant';
+			var url = App.BaseUrl + '?json=get_posts&post_type=colaborar';
 
 			return url + (this.count ? '&count=' + this.count : '') + (this.page ? '&page=' + this.page : '');
 		},
-		model: GrantModel,
+		model: CollabModel,
 
 		initialize: function () {
 			this.page = 1;
@@ -25,5 +25,5 @@ define([
 		}
 	});
 
-	return GrantCollection;
+	return CollabCollection;
 });

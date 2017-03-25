@@ -20,8 +20,8 @@
     </div>
 
     <div class="nav--lang">
-      <a href="#" class="active">PT</a>
-      <a href="#">EN</a>
+      <a id="pt" nohref class={{#ifCond data.locale '===' 'pt'}}"active"{{/ifCond}}>PT</a>
+      <a id="en" nohref class={{#ifCond data.locale '===' 'en'}}"active"{{/ifCond}}>EN</a>
     </div>
   </div>
 

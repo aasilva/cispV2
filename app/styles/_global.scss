@@ -10,3 +10,15 @@
     text-transform: uppercase;
   }
 }
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: -8px;
+  color: #999;
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}

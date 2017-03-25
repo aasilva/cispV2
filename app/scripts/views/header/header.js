@@ -38,7 +38,7 @@ define([
 			window.console.debug('en');
 			App.Vent.trigger('i18n:locale', 'en');
 			window.location.reload();
-		},
+		}
 	});
 
 	return HeaderContainerView;

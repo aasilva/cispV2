@@ -8,7 +8,7 @@ define([
 
 	var NewsModel = Backbone.Model.extend({
 		url: function () {
-			return App.BaseUrl + '?json=get_post&post_type=grants&slug=' + this.get('slug');
+			return App.BaseUrl + '?json=get_post&post_type=collab&slug=' + this.get('slug');
 		},
 
 		initialize: function() {

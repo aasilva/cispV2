@@ -3,15 +3,15 @@
 define([
 	'jquery',
 	'backbone',
-	'collections/grants',
-	'views/grants/grants-index'
-], function ($, Backbone, GrantsCollection, GrantsListView) {
+	'collections/collab',
+	'views/collab/collab-index'
+], function ($, Backbone, CollabCollection, CollabListView) {
 	'use strict';
 
 	var GrantController = Backbone.Router.extend({
 		initialize: function () {
-			App.Vent.on('grants:index', this._index, this);
-			App.Vent.on('grants:more', this._loadMore, this);
+			App.Vent.on('collab:index', this._index, this);
+			App.Vent.on('collab:more', this._loadMore, this);
 		},
 
 		/**
@@ -22,9 +22,10 @@ define([
 		*	@param {string} catg (optional)
 		*/
 		_index: function (catg) {
-			App.Collections.Project = new GrantsCollection;
+			console.log(catg);
+			App.Collections.Project = new CollabCollection;
 			App.Collections.Project.catg = catg;
-			App.Views.Active = new GrantsListView({
+			App.Views.Active = new CollabListView({
 				collection: App.Collections.Project,
 				target: '#post-list-container'
 			});

@@ -3,6 +3,7 @@
   @include _(flex-wrap);
   @include _(limited-full-width);
   padding: 16px 0 32px 0;
+  position: relative;
 
   .subtitle {
     @include _(limited-full-width);

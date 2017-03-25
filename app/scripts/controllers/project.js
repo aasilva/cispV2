@@ -27,7 +27,7 @@ define([
 			App.Collections.Project.catg = catg;
 			App.Views.Active = new ProjectListView({
 				collection: App.Collections.Project,
-				target: '#projects-container'
+        target: '#post-list-container'
 			});
 			this._renderIndex();
 		},

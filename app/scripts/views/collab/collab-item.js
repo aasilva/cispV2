@@ -9,16 +9,16 @@ define([
 ], function ($, _, Backbone, JST) {
 	'use strict';
 
-	var PublicationsItemView = Backbone.BaseView.extend({
-		template: JST['app/scripts/templates/publications/publications-item.hbs'],
+	var CollabItemView = Backbone.BaseView.extend({
+		template: JST['app/scripts/templates/collab/collab-item.hbs'],
 
 		tagName: 'article',
 
 		id: function () {
-			return 'publication-' + this.model.get('id');
+			return 'collab-' + this.model.get('id');
 		},
 
-		className: 'publication-item',
+		className: 'collab-item',
 
 		events: {},
 
@@ -41,5 +41,5 @@ define([
 		}
 	});
 
-	return PublicationsItemView;
+	return CollabItemView;
 });

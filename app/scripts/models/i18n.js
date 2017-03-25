@@ -24,7 +24,7 @@ define([
 		*   @this i18n 
 		*/
 		initialize: function() {
-			var locale = window.localStorage.getItem('locale') || 'en';
+			var locale = window.localStorage.getItem('locale') || App.defaultLocale;
 			
 			App.Vent.on('i18n:locale', this._setLocale, this);
 			App.Vent.trigger('i18n:locale', locale);
@@ -53,6 +53,7 @@ define([
 		_setLocale: function (locale) {
 			this.set('locale', locale);
 			window.localStorage.setItem('locale', locale);
+			App.locale = locale;
 			App.Document.documentElement.attributes.lang.value = locale;
 			this.set(JSON.parse(source)[locale]);
 		}

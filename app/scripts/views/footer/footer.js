@@ -16,7 +16,22 @@ define([
 
 		className: 'footer__container',
 
-		events: {}
+		events: {
+      'click #pt': '_changeLocalePT',
+      'click #en': '_changeLocaleEN'
+		},
+
+    _changeLocalePT: function () {
+      window.console.debug('pt');
+      App.Vent.trigger('i18n:locale', 'pt');
+      window.location.reload();
+    },
+
+    _changeLocaleEN: function () {
+      window.console.debug('en');
+      App.Vent.trigger('i18n:locale', 'en');
+      window.location.reload();
+    }
 	});
 
 	return FooterView;

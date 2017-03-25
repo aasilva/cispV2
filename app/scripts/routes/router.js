@@ -12,8 +12,9 @@ define([
   'controllers/events',
   'controllers/members',
   'controllers/project',
-  'controllers/grants'
-], function ($, Backbone, JST, CommonController, HomeController, StaticController, PublicationController, NewsController, EventsController, MembersController, ProjectController, GrantsController) {
+  'controllers/grants',
+  'controllers/collab'
+], function ($, Backbone, JST, CommonController, HomeController, StaticController, PublicationController, NewsController, EventsController, MembersController, ProjectController, GrantsController, CollabController) {
   'use strict';
 
   var Router = Backbone.Router.extend({
@@ -59,6 +60,9 @@ define([
       }
       if (!App.Controllers.Grants) {
         App.Controllers.Grants = new GrantsController;
+      }
+      if (!App.Controllers.Collab) {
+        App.Controllers.Collab = new CollabController;
       }
     },
 
@@ -121,25 +125,25 @@ define([
       this._common(catg);
       this._loading();
 
-      if (catg === 'noticias') {
+      if (catg === App.i18n.get('route-news')) {
         App.Vent.trigger('news:index');
-      } else if (catg === 'eventos') {
+      } else if (catg === App.i18n.get('route-events')) {
         App.Vent.trigger('events:index');
-      } else if (catg === 'publicacoes') {
+      } else if (catg === App.i18n.get('route-publications')) {
         App.Vent.trigger('publications:index');
-      } else if (catg === 'projetos') {
+      } else if (catg === App.i18n.get('route-projects')) {
         App.Vent.trigger('projects:index');
-      } else if (catg === 'membros') {
+      } else if (catg === App.i18n.get('route-members')) {
         App.Vent.trigger('members:index');
-      } else if (catg === 'bolsas') {
+      } else if (catg === App.i18n.get('route-scholarships')) {
         App.Vent.trigger('grants:index');
-      } else if (catg === 'contactos') {
+      } else if (catg === App.i18n.get('route-contacts')) {
         App.Vent.trigger('static:contacts');
-      } else if (catg === 'missao') {
+      } else if (catg === App.i18n.get('route-mission')) {
         App.Vent.trigger('static:mission');
-      } else if (catg === 'comissao-acompanhamento') {
+      } else if (catg === App.i18n.get('route-monitoring_committee')) {
         App.Vent.trigger('static:commission');
-      } else if (catg === 'linhas-tematicas') {
+      } else if (catg === App.i18n.get('route-thematic_lines')) {
         App.Vent.trigger('static:thematic');
       }
     },
@@ -176,8 +180,7 @@ define([
         });
       } else if (catg === 'contactos') {
         if (slug === 'colaborar-com-cisp') {
-          //TODO: this will be a dynamic page?
-          console.log('TODO: this will be a dynamic page?');
+          App.Vent.trigger('collab:index');
         }
       }
 

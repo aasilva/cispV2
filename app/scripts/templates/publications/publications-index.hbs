@@ -1,9 +1,15 @@
-<div class="post-list__header__title"></div>
-<div id="publications-filter" class="publications-filter">
-	
+<div class="post-list__header">
+
+  <h2 class="post-list__header__title">{{t "publications"}}</h2>
+
+  <div id="publications-filter" class="publications-filter"></div>
+
 </div>
-<div id="publications-container" class="publications-container"></div>
+
+<div id="post-list-container" class="post-list__container events">
+
+</div>
 
 {{!-- {{#ifCond this.length '<' this.totalPosts}} --}}
-<div id="load-more-posts" class="load-more">MAIS</div>
+<div id="load-more-posts" class="load-more">{{t "more"}}</div>
 {{!-- {{/ifCond}} --}}

@@ -29,7 +29,7 @@ define([
 			App.Collections.Publication.author = author;
 			App.Views.Active = new PublicationListView({
 				collection: App.Collections.Publication,
-				target: '#publications-container'
+				target: '#post-list-container'
 			});
 			this._renderIndex();
 		},
