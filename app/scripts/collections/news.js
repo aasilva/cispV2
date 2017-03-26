@@ -9,8 +9,9 @@ define([
 
 	var NewsCollection = Backbone.Collection.extend({
 		url: function () {
-			var url = this.search ? App.BaseUrl + App.locale + '?json=get_posts&post_type=news&s=' + this.search : App.BaseUrl + App.locale + '?json=get_posts&post_type=news';
-			if ( this.isHome ) {
+      var url = this.search ? App.BaseUrl + App.locale + '?json=get_posts&post_type=news&s=' + this.search : App.BaseUrl + (App.locale !== 'pt' ? '' : 'en') + '?json=get_posts&post_type=news';
+
+      if ( this.isHome ) {
 				return url + '&post__in=sticky_posts';
 			} else return url + (this.count ? '&count=' + this.count : '') + (this.page ? '&page=' + this.page : '');
 		},

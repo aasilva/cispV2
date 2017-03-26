@@ -160,26 +160,23 @@ define([
       this._common(catg);
       this._loading();
 
-      if (catg === 'membros') {
+      if (catg === App.i18n.get('route-members')) {
         App.Vent.trigger('members:detail', {
           slug: slug
         });
-      } else if (catg === 'publicacoes') {
-        App.Vent.trigger('publications:index', {
-          slug: slug
-        });
-      } else if (catg === 'eventos') {
+      } else if (catg === App.i18n.get('route-events')) {
         App.Vent.trigger('events:detail', {
           category: catg,
           slug: slug
         });
-      } else if (catg === 'noticias') {
+      } else if (catg === App.i18n.get('route-news')) {
         App.Vent.trigger('news:detail', {
           category: catg,
           slug: slug
         });
-      } else if (catg === 'contactos') {
-        if (slug === 'colaborar-com-cisp') {
+      } else if (catg === App.i18n.get('route-contacts')) {
+        console.log('!');
+        if (slug === App.i18n.get('route-collab_with_cisp')) {
           App.Vent.trigger('collab:index');
         }
       }
