@@ -32,7 +32,7 @@ define([
 
 			if (params) {
 				var paramsUrl = params.replace(' ', '-').toLowerCase(); // prepare params to url (todo: replace special characters)
-				App.Router.navigate('#noticias?' + paramsUrl)
+				App.Router.navigate('#' + App.i18n.get('route-news') + '?' + paramsUrl)
 
 				var paramsEscaped = escape(params); // html escape to params to be searched
 				App.Collections.News.search = paramsEscaped;
@@ -99,7 +99,6 @@ define([
 		 *	@function
 		 */
 		_detail: function (options) {
-
 			if ( App.Collections.News && App.Collections.News.findWhere({ slug: options.slug }) ) {
 				App.Models.Detail = App.Collections.News.findWhere({ slug: options.slug });
 				this._detailView(App.Models.Detail);
