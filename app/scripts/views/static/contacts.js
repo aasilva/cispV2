@@ -22,6 +22,18 @@ define([
       'click #form-send': '_onSendEmailClick'
     },
 
+    initMap: function() {
+      var cisp = {lat: 38.768059, lng: -9.164965};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: cisp
+      });
+      var marker = new google.maps.Marker({
+        position: cisp,
+        map: map
+      });
+    },
+
     _onSendEmailClick: function (ev) {
       ev.preventDefault();
 

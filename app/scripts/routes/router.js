@@ -164,11 +164,11 @@ define([
         App.Vent.trigger('members:detail', {
           slug: slug
         });
-      } else if (catg === 'publicacoes') {
+      } else if (catg === App.i18n.get('route-publications')) {
         App.Vent.trigger('publications:index', {
           slug: slug
         });
-      } else if (catg === 'eventos') {
+      } else if (catg === App.i18n.get('route-events')) {
         App.Vent.trigger('events:detail', {
           category: catg,
           slug: slug
@@ -178,7 +178,7 @@ define([
           category: catg,
           slug: slug
         });
-      } else if (catg === 'contactos') {
+      } else if (catg === App.i18n.get('route-contacts')) {
         if (slug === 'colaborar-com-cisp') {
           App.Vent.trigger('collab:index');
         }

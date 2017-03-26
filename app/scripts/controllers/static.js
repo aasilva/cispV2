@@ -27,7 +27,7 @@ define([
      */
     _contacts: function () {
       App.Views.Active = new ContactsIndexView;
-      this._renderIndex();
+      this._renderIndex(App.Views.Active.initMap);
     },
 
     /**
@@ -73,11 +73,14 @@ define([
      *	@private
      *	@function
      */
-    _renderIndex: function () {
-
+    _renderIndex: function (callback) {
       requestAnimationFrame(function () {
         App.Container.html(App.Views.Active.render().el);
         App.Vent.trigger('global:scroll');
+
+        if ( callback ) {
+          callback();
+        }
       });
     }
   });

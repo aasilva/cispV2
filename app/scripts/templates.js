@@ -74,6 +74,15 @@ function program1(depth0,data) {
   else { return ''; }
   });
 
+this["JST"]["app/scripts/templates/components/map.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div id=\"map\" class=\"map\"></div>\n";
+  });
+
 this["JST"]["app/scripts/templates/components/spinner.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
@@ -1111,7 +1120,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "\n        ";
   stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "icons/ic_more-button", options) : helperMissing.call(depth0, "view", "icons/ic_more-button", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n      </a>\n    </div>\n  </div>\n</div>\n\n<div class=\"contacts__form\">\n  <form>\n    <label for=\"name\" class=\"form-name-label\">\n      <p>"
+  buffer += "\n      </a>\n    </div>\n  </div>\n</div>\n\n";
+  stack1 = (helper = helpers.view || (depth0 && depth0.view),options={hash:{},data:data},helper ? helper.call(depth0, "components/map", options) : helperMissing.call(depth0, "view", "components/map", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n<div class=\"contacts__form\">\n  <form>\n    <label for=\"name\" class=\"form-name-label\">\n      <p>"
     + escapeExpression((helper = helpers.t || (depth0 && depth0.t),options={hash:{},data:data},helper ? helper.call(depth0, "form_name", options) : helperMissing.call(depth0, "t", "form_name", options)))
     + "</p>\n      <input type=\"text\" name=\"name\" id=\"form-name\" class=\"form-name-input\" placeholder=\"\">\n    </label>\n\n    <label for=\"email\" class=\"form-email-label\">\n      <p>"
     + escapeExpression((helper = helpers.t || (depth0 && depth0.t),options={hash:{},data:data},helper ? helper.call(depth0, "form_email", options) : helperMissing.call(depth0, "t", "form_email", options)))
