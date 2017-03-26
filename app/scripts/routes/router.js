@@ -160,10 +160,11 @@ define([
       this._common(catg);
       this._loading();
 
-      if (catg === 'membros') {
+      if (catg === App.i18n.get('route-members')) {
         App.Vent.trigger('members:detail', {
           slug: slug
         });
+
       } else if (catg === App.i18n.get('route-publications')) {
         App.Vent.trigger('publications:index', {
           slug: slug
@@ -179,7 +180,8 @@ define([
           slug: slug
         });
       } else if (catg === App.i18n.get('route-contacts')) {
-        if (slug === 'colaborar-com-cisp') {
+        console.log('!');
+        if (slug === App.i18n.get('route-collab_with_cisp')) {
           App.Vent.trigger('collab:index');
         }
       }
