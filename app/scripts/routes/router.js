@@ -173,7 +173,7 @@ define([
           category: catg,
           slug: slug
         });
-      } else if (catg === 'noticias') {
+      } else if (catg === App.i18n.get('route-news')) {
         App.Vent.trigger('news:detail', {
           category: catg,
           slug: slug

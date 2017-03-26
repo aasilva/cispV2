@@ -20,7 +20,8 @@
   }
 
   &.home {
-    height: 300px;
+    height: 380px;
+    background-position: bottom center;
     @include _(flex);
     @include _(align-items-center);
   }
